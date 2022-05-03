@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>380-속성선택자와 first-child, last-child, nth-child(), nth-of-type()</title>
+  <style>
+    /* target 속성을 가진 a태그의 글자크기를 20px로 설정 */
+    a[target] {
+      font-size: 20px;
+    }
+
+    /* title 속성을 가졌을 뿐만 아니라 그 값이 "외교부"인 a태그 */
+    a[title="외교부"] {
+      background-color: pink;
+    }
+
+    ol>li:first-child {
+      font-weight: 800;
+    }
+
+    ol>li:nth-child(1) {
+      color: blue;
+    }
+
+    ol>li:nth-child(3)>span {
+      color: red;
+    }
+
+    ol>li:last-child {
+      font-weight: 800;
+    }
+
+    ol>li:nth-child(5) {
+      font-style: italic;
+    }
+
+    /* 순수하게 p 태그 중에서 2번째 요소 - p태그만 카운팅 */
+    p:nth-of-type(2) {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="wrap">
+    <h1>강치이야기</h1>
+    <figure>
+      <img src="./images/강치.png" alt="바다사자">
+      <figcaption>&lt;자료제공:해양수산부 공식블로그&gt;</figcaption>
+    </figure>
+    <p>독도는 바다사자 강치의 보금자리로 19세기까지 3~5만여 마리가 살았데요.</p>
+    <p>1951년 독도에서 50~60마리가 확인되었다는 보고를 마지막으로 지금은 멸종되었습니다.</p>
+    <ol>
+      <li>강치(=바다사자)</li>
+      <li>독도에는
+        <ul>
+          <li>가제바위 등 주변에 <mark>바다사자가 쉬기에 좋은 바위</mark>가 많았고</li>
+          <li>난류와 한류가 뒤섞여 먹이가 풍부해 <mark>바다사자들의 주요 번식지이자 서식지</mark>였답니다.</li>
+        </ul>
+      </li>
+      <li><span>멸종</span>
+        <ul>
+          <li>1900년대 초 일본제국의 상업적 어획기록을 살펴보면 <mark>3,200마리 정도의 바다사자가 포획</mark>되었으나</li>
+          <li>남획으로 인해 1915년에는 불과 300마리만 잡힐 정도로 포획량이 급감했고,</li>
+          <li>1930년대에는 수십 마리 정도로 떨어졌어요. </li>
+        </ul>
+      </li>
+      <li>복원 시도
+        <ul>
+          <li>2007년, 대한민국 환경부는 남북한과 러시아, 중국이 협조하여 독도 바다사자를 동해에 복원할 것이라고 발표했어요.</li>
+          <li>이 프로젝트의 실행가능성 조사 연구가 <a href="https://www.nier.go.kr/NIER/kor/index.do" target="_blank">국립환경과학원</a>에
+            일임되었어요.</li>
+          <li>대한민국의 바다사자 복원 시도는 동해와 <a href="https://dokdo.mofa.go.kr/kor/" title="외교부">독도</a>를 둘러싼 국가적 민족적 상징성이 있답니다.
+          </li>
+        </ul>
+      </li>
+      <li>본문내용 위키백과 참조</li>
+    </ol>
+  </div>
+
+</body>
+
+</html>

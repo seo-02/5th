@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>150-구글 CDN을 이용한 웹폰트</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
+
+    /* h1의 줄간격100px, 글자를 가운데 정렬 */
+    h1 {
+      line-height: 100px;
+      text-align: center;
+    }
+
+    /* 
+      div의 직계자식 h2의 글자굵기400, 크기는 16px, 줄간격 50px, 가운데정렬 하시오
+    */
+    div>h2 {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    /* 
+      div의 직계자식 p에 대하여 글자크기 25px, 줄간격 50px, 가운데정렬 하시오
+    */
+    div>p {
+      font-size: 25px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    div>p.webfont {
+      font-size: 40px;
+      font-family: 'Nanum Brush Script';
+      word-spacing: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>독도월드 네비게이션</h1>
+    <div>
+      <h2>1. 웹폰트 적용전</h2>
+      <!-- 한칸공백을 표현하는 특수문자 &nbsp; -->
+      <p>
+        새소식&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        관람안내&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        특별전시&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        주요일정
+      </p>
+    </div>
+
+    <hr />
+
+    <div>
+      <h2>2. <q>East Sea Dokdo</q> 웹폰트 적용후</h2>
+      <p class="webfont">
+        새소식
+        관람안내
+        특별전시
+        주요일정
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>890-페이지에 영상넣기</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    #wrap {
+      padding-bottom: 100px;
+    }
+
+    .video-container {
+      width: 780px;
+      height: 440px;
+      margin: 0 auto 100px;
+      text-align: center;
+    }
+
+    .video-container>video {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">독도는 우리땅(개정판)</h1>
+
+    <!-- 사용법1 -->
+    <figure class="video-container">
+      <video poster="./images/bg_video.png" controls src="./media/dokdo.mp4"></video>
+      <figcaption>&lt; 독도는 우리땅 &gt;</figcaption>
+    </figure>
+
+
+    <!-- 실무사용법2(권장) -->
+    <figure class="video-container">
+      <video autoplay muted>
+        <source src="./media/dokdo.mp4" type="video/mp4" />
+        <source src="./media/dokdo.ogg" type="video/ogg" />
+        <source src="./media/dokdo.webm" type="video/webm" />
+        브라우저가 HTML5 Video 태그를 인식하지 않습니다. <br />
+        최신 브라우저로 다시 접속해 주세요.
+      </video>
+      <figcaption>&lt; 대한민국의 영토 독도 &gt;</figcaption>
+    </figure>
+
+
+    <!-- 유튜브사용법3 -->
+    <figure class="video-container">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ymU8htqPUoc" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <figcaption>&lt; 생후 3 개월에 처음으로 손질하는 아주 작은 강아지 (토이 푸들) &gt;</figcaption>
+    </figure>
+
+  </div>
+</body>
+
+</html>

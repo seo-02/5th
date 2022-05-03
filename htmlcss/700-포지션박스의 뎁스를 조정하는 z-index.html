@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>700-포지션박스의 뎁스를 조정하는 z-index</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    .parent {
+      position: relative;
+      width: 500px;
+      height: 400px;
+      margin: 0 auto;
+      border: 3px solid purple;
+    }
+
+    .parent>p {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      border: 1px solid #000;
+    }
+
+    /* z-index는 10또는 100 단위 권장 */
+
+    .red {
+      left: 200px;
+      top: 100px;
+      z-index: 100;
+      background-color: red;
+    }
+
+    .blue {
+      left: 230px;
+      top: 130px;
+      z-index: 200;
+      background-color: blue;
+    }
+
+    .yellow {
+      left: 150px;
+      top: 160px;
+      z-index: 300;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">z-index를 이용해서 박스가 쌓이는 순서 조정</h1>
+    <div class="parent">
+      <p class="red"></p>
+      <p class="blue"></p>
+      <p class="yellow"></p>
+    </div>
+  </div>
+</body>
+
+</html>

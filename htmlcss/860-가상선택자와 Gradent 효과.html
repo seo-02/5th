@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>860-가상선택자와 Gradent 효과</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    p.frame {
+      overflow: hidden;
+      position: relative;
+      width: 350px;
+      margin: 0 auto 50px;
+    }
+
+    p.frame:after {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 350px;
+      height: 280px;
+      background: linear-gradient(to bottom, transparent 0%, #4779db 99%);
+      opacity: 0;
+      transition: all 0.3s;
+      content: '';
+    }
+
+    p.frame:hover:after {
+      /* display: block; */
+      opacity: 1;
+    }
+
+    p.frame>img {
+      display: block;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">가상선택자와 그레디언트</h1>
+
+    <p class="frame">
+      <img src="./images/독도플라워-1.jpg" alt="독도플라워">
+    </p>
+
+    <p class="frame">
+      <img src="./images/독도표지석.jpg" alt="독도표지석">
+    </p>
+
+  </div>
+</body>
+
+</html>

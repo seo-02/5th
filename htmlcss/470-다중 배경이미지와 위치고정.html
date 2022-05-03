@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>470-다중 배경이미지와 위치고정</title>
+  <style>
+    body {
+      background-image: url(./images/바다-3.jpg);
+      background-size: cover;
+
+      /* 배경이미지가 점착되어 고정됨 */
+      background-attachment: fixed;
+
+      background-repeat: no-repeat;
+    }
+
+    #wrap {
+      height: 1000px;
+    }
+
+    h1 {
+      width: 800px;
+      height: 500px;
+
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1050px;
+      text-align: center;
+      border: 1px solid #000;
+
+      /* 첫번째 배경이 맨위에, 뒤쪽 배경이 아래에 위치함 */
+      background-image: url(./images/icon_star.png),
+        url(./images/dokdo-transparent.png);
+
+      background-position: 380px 200px, center center;
+      background-position: 380px 200px, 50% 50%;
+
+      background-size: 120px auto, auto;
+
+      /* 따로따로 적용 */
+      background-repeat: repeat-x, no-repeat;
+
+      /* 속성값을 하나만 작성하면 일괄적용 */
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>별이 쏟아지는 독도~!</h1>
+  </div>
+</body>
+
+</html>

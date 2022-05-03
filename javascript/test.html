@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>30-animate()를 이용한 요소의 이동과 시간지연 delay() 그리고 stop()</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 300px;
+      height: 300px;
+      margin: 150px auto;
+      border: 5px solid #000;
+      overflow-y: scroll;
+    }
+
+    p.content {
+      height: 1000px;
+      /* margin-top: -100px; */
+      background-color: yellow;
+      border-top: 5px solid #f00;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <p class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam consequuntur aliquid et natus ducimus ipsum hic
+      praesentium porro ipsam modi illum rerum, nostrum dolor! Ipsa architecto impedit blanditiis aliquid alias.Lorem
+      쌤은 여러분을 사랑해요...정말로...!
+      ipsum dolor sit amet consectetur adipisicing elit. Magnam consequuntur aliquid et natus ducimus ipsum hic
+      praesentium porro ipsam modi illum rerum, nostrum dolor! Ipsa architecto impedit blanditiis aliquid alias.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Magnam consequuntur aliquid et natus ducimus ipsum hic
+      praesentium porro ipsam modi illum rerum, nostrum dolor! Ipsa architecto impedit blanditiis aliquid alias.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Magnam consequuntur aliquid et natus ducimus ipsum hic
+      praesentium porro ipsam modi illum rerum, nostrum dolor! Ipsa architecto impedit blanditiis aliquid alias.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Magnam consequuntur aliquid et natus ducimus ipsum hic
+      praesentium porro ipsam modi illum rerum, nostrum dolor! Ipsa architecto impedit blanditiis aliquid alias.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Magnam consequuntur aliquid et natus ducimus ipsum hic
+      praesentium porro ipsam modi illum rerum, nostrum dolor! Ipsa architecto impedit blanditiis aliquid alias.Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Magnam consequuntur aliquid et natus ducimus ipsum hic
+      praesentium porro ipsam modi illum rerum, nostrum dolor! Ipsa architecto impedit blanditiis aliquid alias.
+    </p>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    // 출발 버튼에 대한 클릭 이벤트 구문
+    $('.start').on('click', () => {
+      // .box를 맨끝으로 움직이기
+      // $('.box').animate({left: '700px'}); 아래와 같은 문구
+
+      // >>>>>> $('.box').animate({
+      //   left: 700
+      // });
+
+      // $('.box').animate({
+      //   left: 0
+      // }); <<<<<<< 아래처럼 메소드 체인 방식 가능
+      $('.box').delay(0)
+        .animate({ left: 700 }, 3000)
+        .animate({ left: 0 }, 3000);
+
+    });
+
+    // 정지 버튼에 대한 클릭 이벤트 구문
+    $('.stop').on('click', () => {
+      // 현재 진행중인 애니메이션을 정지 시킴
+      // $('.box').stop([clearQueue],jumpToEnd); true, false 구분으로 작동
+
+      // 진행중인 첫번째 애니메이트만 정지시킴, 큐에 대기중인 나머지 애니메이션 계속 실행
+      // $('.box').stop(false, false); // 기본값 >> 거의 이 값만 씀
+
+      // 바로 정지되면서 큐에 대기중인 애니메이션 모두 제거
+      // $('.box').stop(true, false); 
+
+      // 진행중인 첫번째 애니메이트만 정지시킴
+      // 진행중인 애니메이션이 바로 종료되면서 설정한 종료 지점에 위치함 
+      // $('.box').stop(false, ture);
+
+      // 바로 정지되면서 큐에 대기중인 애니메이션 모두 제거
+      // 진행중인 애니메이션이 바로 종료되면서 설정한 종료 지점에 위치함 
+      $('.box').stop(true, ture);
+    });
+  </script>
+</body>
+
+</html>

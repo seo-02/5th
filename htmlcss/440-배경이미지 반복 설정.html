@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>440-배경이미지 반복 설정</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    p {
+      width: 500px;
+      height: 250px;
+      margin: 0 auto 70px;
+      line-height: 250px;
+      text-align: center;
+      border: 1px solid #000;
+    }
+
+    p.repeat-x {
+      background-image: url(./images/dokdo.jpg);
+      background-repeat: repeat-x;
+    }
+
+    p.repeat-y {
+      background-image: url(./images/dokdo.jpg);
+      background-repeat: repeat-y;
+    }
+
+    p.repeat {
+      background-image: url(./images/dokdo.jpg);
+      /*기본값*/
+      background-repeat: repeat;
+    }
+
+    /* 가장 중요함 */
+    p.no-repeat {
+      background-image: url(./images/dokdo.jpg);
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">독도배경</h1>
+    <div>
+      <p class="repeat-x">x축으로만 반복</p>
+      <p class="repeat-y">y축으로만 반복</p>
+      <p class="repeat">x,y 모든축에서 반복(기본값)</p>
+      <p class="no-repeat">반복안함</p>
+    </div>
+  </div>
+</body>
+
+</html>

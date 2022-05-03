@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>500-박스를 나열하는 최신기술 flex</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <style>
+    #wrap {
+      width: 90%;
+      margin: 0 auto;
+      background-color: floralwhite;
+    }
+
+    ul {
+      display: flex;
+      /* 
+        만약 플렉스아이템(li)의 높이가 설정되어 있지 않으면
+        아이템의 높이값은 부모의 100%만큼 stretch 된다.
+      */
+
+      /* 주축의 방향설정 : 기본값 row, column */
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      /* 
+        한줄 or 여러줄 설정 : 기본값 nowrap(자동줄바꿈을 하지 않고 한줄로 나열됨), wrap(여러줄)
+
+        1. flex-wrap : nowrap;
+          플렉스 컨테이너의 width가 모든 아이템의 합보다 작아지게 되면
+          아이템의 크기 비율을 자동으로 계산하여 모자란 크기만큼 지분비율대로 축소시켜서 최종 한줄로 나열됨
+
+        2. flex-wrap:wrap;
+          플렉스 컨테이너의 width가 모든 아이템의 합보다 작아지게 되면
+          아이템이 drop되어 여러줄로 나열됨
+      */
+
+      /* 주축정렬 */
+      /* 주축의 중앙에 나열 */
+      justify-content: center;
+
+      /* 좌우 아이템을 양끝에 붙이고, 나머지는 동일 간격으로 나열 */
+      justify-content: space-between;
+
+      /* 모든 플렉스아이템이 좌우로 같은 마진값을 가지도록 나열 */
+      justify-content: space-around;
+
+      /* 모든 플렉스 아이템의 여백을 같게하여 나열 */
+      justify-content: space-evenly;
+
+      /* 주축의 끝지점을 기준으로 나열 */
+      justify-content: flex-end;
+
+      /* 주축의 시작지점을 기준으로 나열 (기본값) */
+      justify-content: flex-start;
+
+
+      /* 1줄 일때의 교차축 정렬 : align-items 속성 */
+
+      /* 아이템을 교차축의 중앙에 나열 */
+      align-items: center;
+
+      /* 교차축의 끝지점에 나열 */
+      align-items: flex-end;
+
+      /* 교차축의 시작지점에 나열(기본값) */
+      align-items: flex-start;
+
+
+      height: 500px;
+      border: 5px solid #000;
+    }
+
+    ul>li {
+      height: 300px;
+      color: greenyellow;
+      font-size: 20px;
+      background-size: cover;
+      background-position: center center;
+    }
+
+
+    ul>li.one {
+      /*         
+        order 속성을 아이템에 개별적으로 부여하여 나열 순서를 조정할 수 있다. 
+        기본값은 0으로 설정됨.
+        order 속성값이 같을 경우에는 태그의 코딩순서대로 나열됨
+        100단위 설정을 권장하며 음수도 가능 
+      */
+      order: 100;
+      width: 20%;
+      background-image: url(./images/군함바위.jpg);
+    }
+
+    ul>li.two {
+      order: 200;
+      width: 40%;
+      background-image: url(./images/넙덕바위.jpg);
+    }
+
+    ul>li.three {
+      width: 200px;
+      background-image: url(./images/부채바위.jpg);
+    }
+
+    ul>li.four {
+      order: -100;
+      width: 100px;
+      background-image: url(./images/촛대바위.jpg);
+    }
+
+    ul>li.five {
+      order: -200;
+      width: 150px;
+      background-image: url(./images/굴바위.jpg);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">독도 부속 도서</h1>
+
+    <ul>
+      <li class="one">1.군함바위</li>
+      <li class="two">2.넙덕바위</li>
+      <li class="three">3.부채바위</li>
+      <li class="four">4.촛대바위</li>
+      <li class="five">5.굴바위</li>
+    </ul>
+  </div>
+</body>
+
+</html>

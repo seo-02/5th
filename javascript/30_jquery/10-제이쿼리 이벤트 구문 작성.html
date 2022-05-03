@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>10-제이쿼리 이벤트 구문 작성</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+  <h1>제이쿼리 이벤트 구문</h1>
+
+  <p><button class="btn1">버튼1</button></p>
+  <p><button class="btn2">버튼2</button></p>
+  <p><button class="btn3">버튼3</button></p>
+  <p><button class="btn4">버튼4</button></p>
+  <p><button class="btn5">버튼5</button></p>
+  <p><button class="btn6">버튼6</button></p>
+  <p><button class="btn7">버튼7</button></p>
+  <p><button class="btn8">버튼8</button></p>
+  <p><button class="btn9">버튼9</button></p>
+
+  <script>
+    //제이쿼리 방식으로 DOM을 선택
+    $('#wrap')
+    $('.gnb>li>a')
+    $('h1.logo')
+
+    //버튼1에 click 이벤트 구문
+    $('.btn1').on('click', function () {
+      alert('버튼1 클릭!');
+    });
+
+  </script>
+</body>
+
+</html>

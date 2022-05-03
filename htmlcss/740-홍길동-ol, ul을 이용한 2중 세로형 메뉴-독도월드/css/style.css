@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+#wrap{
+    width: calc(150px * 4 + 30px);
+    margin: 0 auto;
+}
+
+header>nav>.gnb{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+header>nav>.gnb>li{
+    position: relative;/* .lnb에 대한 기준점 설정 */
+    width: 150px;
+}
+
+header>nav>.gnb>li:hover{
+    background-color: green;
+}
+
+header>nav>.gnb>li>a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+header>nav>.gnb>li:hover>a{color: white;}
+
+/* 메인메뉴에 :hover하면 서브메뉴 노출 */
+header>nav>.gnb>li:hover>a+.lnb{display: block;}
+
+header>nav>.gnb>li>a+.lnb{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 49px;
+    width: 150px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+header>nav>.gnb>li>a+.lnb>li{
+    background-color: #fff;
+    border-bottom: 1px dashed #000;
+}
+
+header>nav>.gnb>li>a+.lnb>li:hover{
+    background-color: #ff0;
+}
+
+header>nav>.gnb>li>a+.lnb>li:last-child{
+    border-bottom-width: 0;
+}
+
+header>nav>.gnb>li>a+.lnb>li>a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+section{
+    height: 300px;
+    margin-top: 10px;
+    text-indent: -9999px;
+    background-image: url(./../images/visual.jpg);
+    background-size: cover;
+    border: 1px solid #000;
+}
+
+footer>address{
+    line-height: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

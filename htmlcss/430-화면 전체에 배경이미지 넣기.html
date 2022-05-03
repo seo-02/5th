@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>430-화면 전체에 배경이미지 넣기</title>
+  <style>
+    body {
+      background-color: yellow;
+      background-color: rgb(255, 255, 0);
+      background-color: rgba(255, 255, 0, 0.3);
+      background-color: #ff0;
+
+      background-image: url(./images/img_dokdo.jpg);
+      /* background-position: 100px 100px;
+      background-repeat: no-repeat; */
+
+      /* 요소의 불투명도 조절 0~1 */
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="dokdo">
+    &lt;독도와 자연의 향연&gt;
+  </h1>
+
+  <button>dokdo 스타일링</button>
+
+  <script>
+    const $h1 = document.querySelector('.dokdo');
+    const $btn = document.querySelector('button');
+
+    $btn.addEventListener('click', function () {
+
+      //DOM.style.속성명 = 속성값;
+      $h1.style.width = '1098px';
+      $h1.style.height = '280px';
+      $h1.style.border = '1px solid #000';
+
+      $h1.style.margin = '200px auto';//margin: 200px auto;
+      $h1.style.lineHeight = '650px';//line-height: 650px;
+      $h1.style.textAlign = 'center';//text-align: center;
+      $h1.style.backgroundImage = 'url(./images/img_dokdo.jpg)';//background-image: url(./images/img_dokdo.jpg);
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+header{
+    position: relative;
+    height: 89px;/*=35+54*/
+    background-color: #b9b9b9;
+}
+
+header>h1{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 140px;
+    margin-left: -470px;
+    background-image: url(../images/logo.gif);
+    z-index: 100;
+}
+
+header>h1>a{
+    display: block;
+    height: 109px;
+    text-indent: -9999px;
+}
+
+
+header>nav{
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 100%;
+    height: 54px;
+    background-color: #009DDF;
+}
+
+header>nav>.gnb{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 798px;
+    height: 99px;/*= 54+45*/
+    margin-left: -330px;
+}
+
+header>nav>.gnb>li{
+    height: 54px;
+    border-right: 1px solid #2FBFEF;
+    box-sizing: border-box;
+}
+
+header>nav>.gnb>li:nth-child(1){width: 160px;}
+header>nav>.gnb>li:nth-child(2){width: 148px;}
+header>nav>.gnb>li:nth-child(3){width: 180px;}
+header>nav>.gnb>li:nth-child(4){width: 151px;}
+header>nav>.gnb>li:nth-child(5){width: 159px;}
+
+header>nav>.gnb>li>a{
+    display: block;
+    position: relative;/* .bar에 대한 기준점 */
+    height: 54px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 54px;
+    text-align: center;
+}
+
+header>nav>.gnb>li.on>a,
+header>nav>.gnb>li:hover>a{
+    color: #222;
+    background-color: #fff;
+}
+
+/* js에서 동적으로 생성하는 활성화표시bar */
+header>nav>.gnb>li>a>.bar{
+    display: none;
+    
+    /* width: 100px; JS에서 동적으로 할당 */
+    /* margin-left: -50px; JS에서 동적으로 할당  */
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 5px;
+    background-color: #009DDF;
+}
+
+
+header>nav>.gnb>li>.sub{
+    display: none;
+    position: absolute;/* 기준점은 .gnb */
+    left: 0;
+    top: 54px;
+    width: 100%;
+    background-color: #fff;
+}
+
+header>nav>.gnb>li>.sub>.sub_container{box-sizing: border-box;}
+header>nav>.gnb>li>.submnu_1>.sub_container{padding-left: 0px;}
+header>nav>.gnb>li>.submnu_2>.sub_container{padding-left: 60px;}
+header>nav>.gnb>li>.submnu_3>.sub_container{padding-left: 250px;}
+header>nav>.gnb>li>.submnu_4>.sub_container{padding-left: 360px;}
+header>nav>.gnb>li>.submnu_5>.sub_container{padding-left: 350px;}
+
+header>nav>.gnb>li>.sub>.sub_container>ol{display: flex;}
+header>nav>.gnb>li>.sub>.sub_container>ol>li{
+    margin: 0 12px;
+}
+
+header>nav>.gnb>li>.sub>.sub_container>ol>li>a{
+    display: block;
+    height: 45px;
+    color: #ACACAC;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 45px;
+    text-align: center;
+}
+
+header>nav>.gnb>li>.sub>.sub_container>ol>li>a:hover{
+    color: #000;
+    font-weight: 800;
+}
+
+
+
+
+
+section{
+    margin: 45px auto 0;
+    width: 940px;
+    height: 500px;
+    font-size: 150px;
+    line-height: 500px;
+    text-align: center;
+    background-color: #dedede;
+}
+
+/*
+    @media : 접속장치, 기기, device
+    @media screen : 화면을 가지고 있는 접속장치
+    (max-width:??) : 가로폭
+*/
+@media screen and (max-width:940px){
+    header{min-width:940px;}
+
+    header>h1{
+        left: 0;
+        margin-left: 0;
+    }
+}
+

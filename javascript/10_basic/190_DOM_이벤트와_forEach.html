@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>190_DOM_이벤트와_forEach</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>배열(형식)요소에 활용하는 반복메소드 forEach()</h1>
+    <p id="print"></p>
+    <button>확인</button>
+  </div>
+
+  <script>
+    const arrData = ['둘리', '또치', '도우너', '마이콜', 10, 20, 30, 40, 50];
+    const $btn = document.querySelector('button');
+    const $print = document.getElementById('print');
+
+    let result = '';
+
+    $btn.addEventListener('click', () => {
+
+      arrData.forEach((item, idx) => {
+        result += '인덱스:' + idx + ', ' + item + '<br />';
+      })
+
+      console.log('result =', result);
+
+      $print.innerHTML = result;
+    });
+  </script>
+</body>
+
+</html>

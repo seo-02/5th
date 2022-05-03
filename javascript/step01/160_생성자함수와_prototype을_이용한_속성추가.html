@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>160_생성자함수와_prototype을_이용한_속성추가</title>
+</head>
+
+<body>
+  <h1>생성자함수와_prototype을_이용한_속성추가</h1>
+
+  <script>
+    //메소드를 가진 생성자함수
+    function Car(name, color) {
+      this.name = name;
+      this.color = color;
+      this.info = function () {
+        console.log('이번에 새로 뽑은 ' + this.color + '색의 ' + this.name + ' 입니다.');
+      }
+    }
+
+    //생성자함수를 이용해서 객체변수를 만들때는 new 키워드를 이용한다.(규칙)
+    const myCar = new Car('제네시스', '검정');
+    myCar.info();
+
+
+
+    //myCar 객체변수의 생성자 파악
+    console.log(myCar.constructor);
+
+    //myCar 객체변수의 모든 정보를 구조적으로 제공
+    console.dir(myCar)
+
+
+    //자동상속 성질을 이용하여 최상위 원형객체 Object()에 속한 메소드를 사용한 사례
+    console.log(myCar.hasOwnProperty('name'));
+
+
+    //부모생성자
+    function Robot(name) {
+      this.name = name;
+    }
+
+    //생성자함수의 prototype에 info 메소드 추가
+    Robot.prototype.info = function () {
+      console.log('저는 ' + this.name + ' 입니다.');
+    }
+
+
+    //자식에 해당하는 객체변수 생성
+    const taekwonV = new Robot('태권브이');
+    const mazingerZ = new Robot('마징가제트');
+    const optimus = new Robot('옵티머스');
+
+    /*
+        위의 생성자함수 Robot를 이용해서 내부적으로 만들어진 객체변수는 아래와 같다.
+    
+        const taekwonV = {name : '태권브이'}
+        const mazingerZ = {name : '마징가제트'}
+        const optimus = {name : '옵티머스'}        
+
+        생성자함수에 메소드가 필요할 경우 150번 예제처럼 생성자함수 내부에 메소드구문을 넣어도 되지만,
+        그럴경우 생성된 객체변수마다 개별 메소드가 생성된다. -> 메소드 코드 중복
+
+        그래서 실무에서는 생성자함수에 메소드가 필요할 경우 자바스크립트의 prototype 상속의 원리를 이용해서
+        메소드를 등록한다. 이렇게 하면 메소드 코드 중복을 피할 수 있다.
+    */
+
+    taekwonV.info();
+    mazingerZ.info();
+    optimus.info();
+
+    //부모자식 관계 증명
+    console.log(taekwonV.constructor);//Robot
+    console.dir(taekwonV);
+  </script>
+</body>
+
+</html>

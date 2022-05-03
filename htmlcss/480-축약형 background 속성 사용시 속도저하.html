@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>480-축약형 background 속성 사용시 속도저하</title>
+  <style>
+    h1 {
+      width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      text-align: center;
+      /* 
+        background-color: beige;
+        background-image: url(./images/독도경치-6.jpg);
+        background-position: 100px 50px;
+        background-size: cover;
+        background-repeat: no-repeat; 
+      */
+
+      /* 축약식의 경우 기재하지 않은 다른 속성값이 자동으로 추가 적용되어 브라우저가 해석해야 할 계산량이 많아져서 속도에 영향을 끼친다. */
+      background: beige url(./images/독도경치-6.jpg) 100px 50px cover no-repeat;
+
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>독도경치</h1>
+</body>
+
+</html>

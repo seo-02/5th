@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>710-기준점설정과 포지션박스의 뎁스를 조정하는 z-index</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    ol {
+      position: relative;
+      width: 1280px;
+      height: 833px;
+      margin: 0 auto;
+      background-image: url(./images/동도-퍼즐.jpg);
+    }
+
+
+    ol>li {
+      position: absolute;
+      color: white;
+      font-weight: 600;
+      font-size: 20px;
+      text-align: center;
+      border: 3px solid white;
+      box-sizing: border-box;
+    }
+
+    ol>li:hover {
+      text-decoration: underline;
+    }
+
+    ol>li:nth-child(1) {
+      left: 370px;
+      top: 350px;
+      width: 213px;
+      height: 107px;
+      line-height: 250px;
+      background-image: url(./images/동도-퍼즐-독도표지석.jpg);
+    }
+
+    ol>li:nth-child(2) {
+      left: 620px;
+      top: 90px;
+      z-index: 100;
+      width: 237px;
+      height: 211px;
+      line-height: 330px;
+      background-image: url(./images/동도-퍼즐-등대.jpg);
+    }
+
+    ol>li:nth-child(3) {
+      left: 775px;
+      top: 240px;
+      width: 500px;
+      height: 270px;
+      line-height: 150px;
+      background-image: url(./images/동도-퍼즐-선착장.jpg);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">독도의 동도</h1>
+
+    <ol>
+      <li>독도표지석</li>
+      <li>독도등대</li>
+      <li>독도선착장</li>
+    </ol>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>두 값의 맞교환</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+    }
+
+    p {
+      position: absolute;
+      left: 50%;
+      top: 150px;
+      width: 100px;
+      height: 100px;
+      font-size: 32px;
+      line-height: 100px;
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    p.a {
+      margin-left: -150px;
+      background-color: yellow;
+    }
+
+    p.b {
+      margin-left: 50px;
+      background-color: pink;
+    }
+
+    button {
+      display: block;
+      width: 80px;
+      height: 30px;
+      margin: 200px auto;
+    }
+  </style>
+  <script>
+    /*
+      변수 2개의 값을 맞바꾸는 문제입니다.
+      각각 5와 7을 저장하고 있는 변수 a, b가 있습니다.
+      아래와 같이 출력되도록 코드를 작성하세요.
+  
+      [출력결과]
+  
+      before :  a=7, b=5
+      after : a=5, b=7 
+    */
+    let a = 7;
+    let b = 5;
+
+    console.log('before : a=' + a + ' b=' + b);
+
+    let tmp = a;//7
+    a = b;
+    b = tmp;
+
+    console.log('after : a=' + a + ' b=' + b);
+
+  </script>
+</head>
+
+<body>
+  <h1>두 값의 맞교환</h1>
+
+  <p class="a">5</p>
+  <p class="b">7</p>
+  <button>맞교환</button>
+
+  <script>
+    const arrColor = ['green', 'brown', 'blue', 'orange', 'purple', 'gray'];
+    const $btn = document.querySelector('button');
+
+    //버튼에 클릭이벤트 구문
+    $btn.addEventListener('click', function () {
+      const $a = document.querySelector('.a');
+      const $b = document.querySelector('.b');
+
+      //빈 변수를 이용해서 값을 맞교환 하는 로직
+      let aVal = $a.textContent;
+      let bVal = $b.textContent;
+      let tmp = aVal;
+
+      aVal = bVal;
+      bVal = tmp;
+
+      //DOM 내용 조작
+      $a.textContent = aVal;
+      $b.textContent = bVal;
+
+      //body의 배경색 조작
+      const idx = Math.floor(Math.random() * arrColor.length);//0~5
+      document.body.style.backgroundColor = arrColor[idx];
+
+      document.querySelector('h1').style.color = 'white';
+    });
+  </script>
+</body>
+
+</html>

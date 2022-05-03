@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+header {
+	height: 142px;
+}
+
+header > .tnb {
+	/*부모*/
+	position: relative;
+	height: 35px;
+	background-color: #f6f6f6;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+header > .tnb > ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+
+	position: absolute;
+	left: 50%;
+	top: 0;
+
+	margin-left: 250px;
+}
+
+header > .tnb > ul > li {
+	border-right: 1px solid #d9d9d9;
+}
+header > .tnb > ul > li > a {
+	display: block;
+	height: 35px;
+	padding: 0 15px;
+	line-height: 35px;
+}
+
+header > h1 {
+	width: 210px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	background-image: url(./../images/logo.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+header > h1 > a {
+	display: block;
+	height: 67px;
+}
+
+/* 네비게이션 영역 */
+header > nav {
+	position: relative; /* .lnb-container에 대한 기준점 설정 */
+	background-color: #3185c1;
+}
+
+/* 메인메뉴 */
+header > nav > .gnb {
+	display: flex;
+	justify-content: center;
+	/* width: 100%; */
+	/* border: 1px solid #000; */
+}
+
+header > nav > .gnb > li > a {
+	display: block;
+	position: relative; /* 화살표에 대한 기준점 */
+	height: 50px;
+	padding: 0 17px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 50px;
+}
+
+/* :after, :before를 이용한 장식재 처리 예시 */
+/* header > nav > .gnb > li > a:hover > .arr { */
+/* header > nav > .gnb > li > a:hover:after { */
+header > nav > .gnb > li:hover:after {
+	display: block;
+	position: relative;
+	left: 50%;
+	top: -16px;
+	width: 0;
+	height: 0;
+	margin-left: -8px;
+	border-width: 8px;
+	border-style: solid;
+	border-color: transparent transparent #0d598f transparent;
+	content: '';
+}
+
+header > nav > .gnb > li:nth-child(4):hover:after {
+	display: none;
+}
+
+/* 서브메뉴 */
+header > nav > .gnb > li:hover > a + .lnb-container {
+	display: block;
+}
+
+header > nav > .gnb > li > a + .lnb-container {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 50px;
+	width: 100%;
+	height: 40px;
+	background-color: #0d598f;
+}
+
+header > nav > .gnb .lnb {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+	position: absolute;
+	left: 50%;
+	top: 0;
+}
+
+header > nav > .gnb .lnb.lnb_1 {
+	margin-left: -452px;
+}
+
+header > nav > .gnb .lnb.lnb_2 {
+	margin-left: -452px;
+}
+
+header > nav > .gnb .lnb.lnb_3 {
+	margin-left: -212px;
+}
+
+header > nav > .gnb .lnb.lnb_5 {
+	margin-left: 50px;
+}
+
+header > nav > .gnb .lnb.lnb_6 {
+	margin-left: 142px;
+}
+
+header > nav > .gnb .lnb.lnb_7 {
+	margin-left: 292px;
+}
+
+header > nav > .gnb .lnb.lnb_8 {
+	margin-left: 280px;
+}
+
+header > nav > .gnb .lnb > li {
+	margin-right: 20px;
+}
+
+header > nav > .gnb .lnb > li > a {
+	display: block;
+	height: 40px;
+	color: #fff;
+	line-height: 40px;
+}
+
+section {
+	text-indent: -9999px;
+}
+
+section.visual {
+	height: 170px;
+	background-color: #c4ddf3;
+	background-image: url(./../images/visual.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+section.cont {
+	width: 1000px;
+	height: 584px;
+	margin: 0 auto;
+	background-image: url(./../images/content.png);
+}
+
+footer {
+	padding: 30px 0;
+	border-top: 1px solid #d9d9d9;
+}
+
+footer > address {
+	line-height: 25px;
+	text-align: center;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>생성자함수</title>
+  <script>
+    //생성자함수 선언
+    function CheckWeight(name, height, weight) {
+      this.name = name;
+      this.height = height;
+      this.weight = weight;
+    }
+
+    CheckWeight.prototype.getInfo = function () {
+      return '이름:' + this.name + ', 키:' + this.height + ', 몸무게:' + this.weight;
+    };
+
+    CheckWeight.prototype.getResult = function () {
+      //만약 아래의 minWeight, maxWeight을 다른 메소드에서도 사용해야 한다면 
+      //지금처럼 지역변수로 선언하는 대신 this.minWeight 처럼 속성으로 등록하면 됨(교재참조)
+      const minWeight = (this.height - 100) * 0.9 - 5
+      const maxWeight = (this.height - 100) * 0.9 + 5
+
+      if (this.weight >= minWeight && this.weight <= maxWeight) {
+        return '정상 몸무게 입니다.';
+
+      } else if (this.weight < minWeight) {
+        return '정상 몸무게보다 미달입니다.';
+
+      } else {
+        return '정상 몸무게보다 초과입니다.';
+      }
+    };
+
+    const yang = new CheckWeight('홍길동', 184, 78);
+
+    document.write(yang.getInfo() + '<br />');//이름:홍길동, 키:184, 몸무게:78
+    document.write(yang.getResult());
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

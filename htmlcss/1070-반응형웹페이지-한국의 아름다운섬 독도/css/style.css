@@ -1,0 +1,274 @@
+@charset "utf-8";
+
+#wrap {
+	width: 600px;
+	margin: 30px auto;
+	background-color: #333;
+}
+
+header {
+	position: relative; /* 기준점설정 */
+	height: 100px;
+	background-color: #069;
+}
+
+header > h1.logo {
+	position: absolute;
+	left: 45px;
+	top: 35px;
+}
+
+header > h1.logo > a {
+	color: #fff;
+	font-size: 30px;
+}
+
+/* 햄버거 버튼 */
+header > .btn {
+	display: none;
+}
+
+header > nav {
+	position: absolute;
+	right: 35px;
+	top: 48px;
+}
+
+header > nav > .gnb {
+	display: flex;
+}
+
+header > nav > .gnb > li {
+	width: 75px;
+}
+
+header > nav > .gnb > li > a {
+	display: block;
+	height: 20px;
+	color: #fff;
+	font-weight: 500;
+	line-height: 20px;
+	text-align: center;
+}
+
+header > nav > .gnb > li:hover > a,
+header > nav > .gnb > li.on > a {
+	color: #ff0;
+	text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+}
+
+section {
+	width: 580px;
+	width: calc(580px - 24px - 24px);
+	margin: 0 auto;
+	padding: 30px 24px 10px;
+	background-color: #fff;
+}
+
+section > h2.visual {
+	height: 200px;
+	background-image: url(./../images/visual-dokdo.png);
+	background-size: contain;
+	text-indent: -9999px;
+}
+
+section > h3 {
+	margin: 25px 0;
+	font-weight: 500;
+	font-size: 25px;
+	text-align: center;
+}
+
+section > p {
+	font-size: 14px;
+	line-height: 1.4;
+	text-align: justify;
+}
+
+section > p:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+section > p > .frame {
+	display: block;
+	overflow: hidden;
+	float: right;
+	width: 300px;
+	margin: 0 0 2px 7px;
+	border-radius: 5px;
+
+	box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+}
+
+section > p > .frame > img {
+	display: block;
+	width: 100%;
+}
+
+footer > address {
+	position: relative; /* 그림자의 기준점 */
+	height: 100px;
+	color: #fff;
+	line-height: 120px;
+	text-indent: 48px;
+	text-align: center;
+}
+
+footer > address:before {
+	display: block;
+	position: absolute;
+	left: 176px;
+	top: 41px;
+	width: 37px;
+	height: 30px;
+	background-image: url(./../images/dokdo-white.png);
+	background-position: 0 15px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: '';
+}
+
+@media screen and (max-width: 640px) {
+	#wrap {
+		width: 100%;
+		margin: initial;
+		background-color: #fff;
+	}
+
+	header {
+		height: 72px;
+	}
+
+	header > h1:before {
+		display: block;
+		position: absolute;
+		left: -50px;
+		top: 2px;
+		width: 37px;
+		height: 30px;
+		background-image: url(./../images/dokdo-white.png);
+		background-position: 0 15px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: '';
+	}
+
+	header > h1.logo {
+		left: 79px;
+		top: 20px;
+	}
+
+	header > h1.logo > a {
+		font-size: 24px;
+	}
+
+	/* 햄버거 버튼 */
+	header > .btn {
+		display: block;
+		position: absolute;
+		right: 25px;
+		top: 18px;
+		width: 56px;
+		height: 36px;
+		border: 1px solid #ccc;
+		cursor: pointer;
+	}
+
+	header > .btn > .bar {
+		display: block;
+		width: 32px;
+		height: 2px;
+		margin: 0 auto 5px;
+		background-color: #fff;
+	}
+
+	header > .btn > .bar:nth-child(1) {
+		margin-top: 9px;
+	}
+
+	/* header > .btn:hover + nav {
+		display: block;
+	} */
+
+	header > nav {
+		display: block;
+		/* border: 1px solid blue; */
+		position: absolute;
+		right: initial;
+		left: 0;
+		top: 72px;
+		width: 100%;
+		background-color: #fff;
+	}
+
+	header > nav > .gnb {
+		display: block;
+	}
+
+	header > nav > .gnb > li {
+		width: 100%;
+		border-bottom: 1px solid #ccc;
+	}
+
+	header > nav > .gnb > li > a {
+		color: #222;
+		height: 50px;
+		line-height: 50px;
+		text-indent: 40px;
+		text-align: left;
+	}
+
+	header > nav > .gnb > li:hover > a,
+	header > nav > .gnb > li.on > a {
+		color: #069;
+	}
+
+	section {
+		width: 100%;
+		padding: 0;
+		padding-bottom: 30px;
+	}
+
+	section > h3 {
+		font-size: 20px;
+	}
+
+	section > p {
+		padding: 0 40px;
+		line-height: 24px;
+	}
+
+	section > p:after {
+		display: initial;
+		clear: none;
+	}
+
+	section > p > .frame {
+		float: none;
+		width: 100%;
+		margin: 0;
+		margin-bottom: 30px;
+		box-shadow: none;
+	}
+
+	footer {
+		width: calc(100% - 80px);
+		margin: 0 auto;
+		border-top: 3px solid #eee;
+	}
+
+	footer > address {
+		color: #222;
+		line-height: 100px;
+	}
+
+	footer > address:before {
+		left: 50%;
+		top: 47px;
+		margin-left: -120px;
+		background-image: url(./../images/dokdo-black.png);
+		background-position: 0 0;
+	}
+}

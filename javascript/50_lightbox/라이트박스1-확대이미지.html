@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>라이트박스1-확대이미지</title>
+  <style>
+    h1 {
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+    }
+
+    a.book {
+      display: inline-block;
+      width: 140px;
+      height: 190px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 라이트박스 */
+    .lightbox {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      width: 400px;
+      height: 500px;
+      margin: -250px 0 0 -200px;
+    }
+  </style>
+  <script>
+    //DOM-Tree 구성이 완료되었을때...를 의미하는 이벤트 구문 작성
+    document.addEventListener('DOMContentLoaded', function () {
+
+      const $books = document.querySelectorAll('.book');
+      const $lightbox = document.querySelector('.lightbox');
+
+      //2개의 $books에 대한 클릭이벤트 구문을 forEach를 이용해서 작성
+      $books.forEach(function ($book) {
+
+        $book.addEventListener('click', function (evt) {
+          evt.preventDefault();
+
+          //이번에 클릭한 a의 herf 속성값을 추출
+          const imgSrc = this.getAttribute('href');
+          console.log('imgSrc =', imgSrc);
+
+          //이번에 클릭한 a의 직계자식 img의 alt 속성값을 추출
+          const imgAlt = this.children[0].getAttribute('alt');
+          console.log('imgAlt =', imgAlt);
+
+          //자바스크립트에서 동적으로 img 태그 생성
+          const $img = document.createElement('img');
+          $img.setAttribute('src', imgSrc);
+          $img.setAttribute('alt', imgAlt);
+
+          $lightbox.innerHTML = '';//기존 내용 비움
+          $lightbox.appendChild($img);//마지막 자식으로 추가
+
+          $lightbox.style.display = 'block';
+        });
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>라이트박스1-확대이미지</h1>
+    <div>
+      <a href="./images/big_1.png" class="book">
+        <img src="./images/thumb_1.png" alt="반응형웹 퍼블리싱">
+      </a>
+      <a href="./images/big_2.png" class="book">
+        <img src="./images/thumb_2.png" alt="UIUX 디자인">
+      </a>
+    </div>
+
+    <div class="lightbox">
+      <!-- <img src="./images/big_1.png" alt="반응형웹 퍼블리싱"> -->
+    </div>
+  </div>
+</body>
+
+</html>

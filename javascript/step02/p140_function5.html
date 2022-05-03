@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>두잇자바스크립트</title>
+  <script>
+
+    //배열의 주소값을 전달받는 함수
+    function testAvg(arrData) {//0x01010
+
+      let sum = 0;//총점
+
+      for (let i = 0; i < arrData.length; i++) {
+        sum = sum + Number(prompt(arrData[i] + '점수는?', '0'));
+      }
+
+      let avg = sum / arrData.length;
+
+      return avg;
+    }
+
+    let arrSubject = ['국어', '수학'];//0x01010
+    let result = testAvg(arrSubject);
+
+    document.write('평균 점수는 ' + result + '점 입니다.');
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

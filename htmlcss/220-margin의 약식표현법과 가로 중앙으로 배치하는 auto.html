@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>220-margin의 약식표현법과 가로 중앙으로 배치하는 auto</title>
+    <style>
+        *{margin:0;padding:0;}
+
+        #dokdo{
+            width:800px;
+            height:400px;
+
+            margin-left:auto;
+            margin-right:auto;
+
+            margin: 0 auto 0 auto;
+            
+            /* 두자리표현법 0은 상하, auto는 좌우 */
+            margin: 0 auto;
+
+            /* 세자리표현법 30px은 상, auto는 좌우, 0은 아래방향 */
+            margin: 30px auto 0;
+
+            margin: 0;
+
+            font-size: 0;
+            border:1px solid blue;
+        }
+
+        p{
+            width:150px;
+            height:120px;
+            font-size: 16px;
+            border:1px solid black;
+        }
+
+        .seodo{
+            display: inline-block;
+
+            margin: 50px; /* 사방이 동일한 크기의 마진 */
+            margin: 50px 100px; /* 위아래가 동일하고, 좌우가 동일한 경우 */
+            margin: 70px 100px 50px; /* 위아래는 다른데, 좌우가 동일한경우 */
+
+            background-image: url(./images/서도-150.jpg);
+        }
+
+        .dongdo{
+            display: inline-block;
+            background-image: url(./images/동도-150.jpg);
+        }
+
+        .bochal{
+            margin: 0 auto;
+            background-image: url(./images/bochal-150.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div id="dokdo">
+        <p class="seodo">서도</p>
+        <p class="dongdo">동도</p>
+        <p class="bochal">보찰바위</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+/* 리셋 */
+*{margin: 0;padding: 0;}
+ul,ol,li{list-style: none;}
+
+a:link,
+a:visited,
+a:hover,
+a:active{
+  color: #222328;
+  text-decoration: none;
+}
+
+body{
+  color: #222328;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+/* 완성후 삭제예정코드 */
+header,section,article,footer{outline: 1px solid red;}
+
+#wrap{width: 1200px;margin: 0 auto;}
+
+/* A영역 */
+header{
+  position: relative;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+}
+
+header>.logo{
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 200px;
+  background-image: url(./../images/logo.jpg);
+}
+
+header>.logo>a{
+  display: block;
+  height: 40px;
+  text-indent: -9999px;
+}
+
+
+/* 네비게이션 */
+header>nav{
+  position: absolute;
+  right: 0;
+  top: 25px;
+  width: 800px;
+}
+
+header>nav>.gnb{
+  display: flex;
+}
+
+header>nav>.gnb>li{
+  width: 200px;
+  /* outline: 1px solid blue; */
+}
+
+header>nav>.gnb>li>a{
+  display: block;
+  height: 50px;
+  font-weight: 800;
+  line-height: 50px;
+  text-align: center;
+}
+
+header>nav>.gnb>li:hover>a{
+  color: #fff;
+  background-color: rgb(69, 65, 152);
+}
+
+/* 서브메뉴 */
+header>nav>.gnb>li>.lnb{
+  display: none;
+  background-color: rgba(98, 95, 151, 0.9);
+}
+
+header>nav>.gnb>li>.lnb>li>a{
+  display: block;
+  height: 40px;
+  color: #bbb;
+  line-height: 40px;
+  text-align: center;
+}
+
+header>nav>.gnb>li>.lnb>li:hover>a{
+  color: #fff;
+  background-color: rgb(69, 65, 152);
+}
+
+
+
+/* B영역 */
+section{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url(./../images/slide-1.jpg);
+}
+
+article{
+  height: 200px;
+}
+
+footer{
+  height: 100px;
+}

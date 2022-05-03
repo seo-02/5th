@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>680-position을 이용한 독도 퍼즐맞추기</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <style>
+    /* 
+      CSS 속성 사용시 대원칙(개념)
+
+      1. margin - 요소간의 간격
+      2. padding - contentBox와 border사이의 공간
+      3. flex - 나열(일정한 규칙을 가지고 가로/세로 나열)
+      4. float - 글자의 흐름을 조절
+      5. position - 배치(어떤 규칙에 제한받지 않고 요소를 원하는 곳에 놓는다.)
+      6. grid - 나열과 배치의 개념을 두루 가지고 잇는 레이아웃 속성(반응형웹 제작시 굉장한 위력 발휘함)
+    */
+
+    #wrap {
+      width: 1366px;
+      margin: 0 auto;
+    }
+
+    ul {
+      /* 
+        relative의 의미
+        "내 안에서 자손요소가 pos:a 할경우 나를 기준으로 위치지정 한다" 는 의미
+        pos:r 의 주용도는 기준점 설정이다.
+      */
+      position: relative;
+      height: 768px;
+      background-image: url(./images/서도-퍼즐.jpg);
+    }
+
+    ul>li {
+      width: 220px;
+      height: 140px;
+      color: #fff;
+      font-size: 20px;
+      line-height: 100px;
+      text-align: center;
+      border: 3px solid #fff;
+    }
+
+
+    ul>li:hover {
+      text-decoration: underline;
+    }
+
+    ul>li:nth-child(1) {
+      position: absolute;
+      left: 280px;
+      top: 480px;
+      background-image: url(./images/서도-퍼즐-어민숙소.jpg);
+    }
+
+    ul>li:nth-child(2) {
+      position: absolute;
+      left: 590px;
+      top: 90px;
+      background-image: url(./images/서도-퍼즐-대한봉.jpg);
+    }
+
+    ul>li:nth-child(3) {
+      position: absolute;
+      left: 860px;
+      top: 300px;
+      background-image: url(./images/서도-퍼즐-탕건봉.jpg);
+    }
+
+    ul>li:nth-child(4) {
+      position: absolute;
+      left: 1080px;
+      top: 510px;
+      background-image: url(./images/서도-퍼즐-삼형제굴바위.jpg);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">독도의 서도 퍼즐맞추기</h1>
+
+    <ul>
+      <li>어민숙소</li>
+      <li>대한봉</li>
+      <li>탕건봉</li>
+      <li>삼형제굴바위</li>
+    </ul>
+  </div>
+</body>
+
+</html>

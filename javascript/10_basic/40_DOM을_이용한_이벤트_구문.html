@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>40_DOM을_이용한_이벤트_구문</title>
+
+</head>
+<body>
+    <div id="wrap">
+        <h1>
+            브라우저는 HTML 코드를 해석해서 계층화된 Tree 형태의 DOM을 생성한다.<br />
+            DOM Tree가 먼저 구성되어야 비로서 개발자가 DOM을 선택할 수 있다.
+        </h1>
+
+        <h2>
+            DOM의 역할 - JS가 HTML 소스에 접근하여 내용을 가져오거나, 조작하기 위한 인터페이스(통로/게이트) 역할
+        </h2>
+
+        <button style="padding: 20px;">클릭하세요~!</button>
+    </div>
+
+    <script>
+        function msgFn(){
+            alert('기명함수 형태의 이벤트핸들러');
+        }
+        
+        //버튼을 클릭하면 msgFn 이벤트핸들러를 호출
+        //DOM선택.addEventListener('이벤트명', 기명함수 형태의 이벤트핸들러);
+        document.querySelector('button').addEventListener('click',msgFn);
+
+
+        function happyFn(msg){
+            alert(msg);
+        }
+
+
+        //DOM선택.addEventListener('이벤트명', 익명함수 형태의 이벤트핸들러);
+        document.querySelector('button').addEventListener('click', function(){
+            happyFn('늘 행복하세요~!');
+        });
+    </script>
+</body>
+</html>

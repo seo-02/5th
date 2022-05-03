@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>두잇자바스크립트</title>
+  <script>
+
+    function myFnc(name, area) {
+      //만약 호출시 이름 또는 지역을 보내지 않을경우
+      //'데이터가 누락되었습니다.'라고 알림창을 나타내는 코드로 개선하시오
+
+      //매개변수에 아무 값도 할당되지 않으면 undefined가 할당됨
+      if (name === undefined || area === undefined) {
+        alert('데이터가 누락되었습니다.');
+      } else {
+        document.write('안녕하세요 ' + name + '입니다', '<br />');
+        document.write('사는 곳은 ' + area + '입니다', '<br />');
+      }
+    }
+
+    myFnc('홍당무');
+
+    myFnc('홍당무', '서울');
+
+    myFnc('깍두기', '부산');
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

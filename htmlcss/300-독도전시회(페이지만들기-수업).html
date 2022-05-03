@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>300-독도전시회(페이지만들기)</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    #wrap {
+      width: 500px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+
+    figure>img {
+      /* 이미지밑에 약간 뜨는현상 제거 */
+      display: block;
+      width: 500px;
+      padding: 5px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    figure>figcaption {
+      font-size: 12px;
+      line-height: 25px;
+      text-align: center;
+    }
+
+    figure+p {
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">독도전시회</h1>
+
+    <figure>
+      <img src="./images/독도전시회.jpg" alt="독도전시회" />
+      <figcaption>&lt;대한민국영토 독도&gt;</figcaption>
+    </figure>
+
+    <p>
+      2022년 독도의 날 122주년을 기념해 기획 특별전의 일환으로 <br />
+      독도를 주제로 한 온라인 전시회 <q>독도, 독립과 평화를 노래하다.</q>를 개최합니다.
+    </p>
+  </div>
+</body>
+
+</html>

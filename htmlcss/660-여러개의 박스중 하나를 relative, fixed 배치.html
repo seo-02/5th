@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>660-여러개의 박스중 하나를 relative, fixed 배치</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 10px;
+      background-color: yellow;
+    }
+
+    .abs {
+      position: absolute;
+      left: 100px;
+      top: 100px;
+      color: white;
+      background-color: red;
+    }
+
+    /* 
+      relative의 진정한 의미
+
+      relative의 좌표이동 기준점은 원해 해당 요소가 위치해 있던 바로 그 지점이 기준점이다.
+      그리고 이동시 원래 있던 자리는 구멍이 뻥 뚫린채 그대로 보존된다.
+    */
+    .rel {
+      position: relative;
+      left: 50px;
+      top: 50px;
+      color: white;
+      background-color: blue;
+    }
+
+    .fixed {
+      /* 
+        fixed는 무조건 body가 기준점이며,
+        스크롤바와 상관없이 항상 지정된 좌표에 고정된다.
+      */
+      position: fixed;
+      left: 500px;
+      top: 50px;
+      color: white;
+      background-color: purple;
+    }
+  </style>
+</head>
+
+<body>
+  <p>박스1</p>
+  <p class="abs">absolute</p>
+  <p>박스3</p>
+  <p class="rel">relative</p>
+  <p>박스5</p>
+  <p class="fixed">fixed</p>
+</body>
+
+</html>

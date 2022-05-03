@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>670-기준점를 기준으로 한 배치(기준점설정)</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    body {
+      padding-bottom: 1000px;
+    }
+
+    /* 
+      기준점 설정이 갖는 의미
+
+      => "내 안에서 직계자식을 포함한 자손요소가 pos:a 할경우 나를 기준으로 위치지정 한다."는 뜻
+      => 기준점 설정 방법은 직계 상위요소에 pos:a, pos:f, pos:r를 설정하면 된다.
+    */
+    .standard {
+
+      /* position: absolute; 기준점 설정 가능 */
+      /* position: fixed; 기준점 설정 가능 */
+      position: relative;
+      left: 300px;
+      top: 150px;
+      width: 400px;
+      height: 400px;
+      /* margin: 100px 0 0 100px; */
+      background-color: #ff0;
+    }
+
+    .standard>.abs {
+      display: block;
+
+      position: absolute;
+      left: 80px;
+      top: 50px;
+
+      width: 100px;
+      height: 100px;
+      font-size: 16px;
+      background-color: skyblue;
+    }
+
+    /* 기준점 설정 실험 */
+    .parent {
+      /* 
+        기준점 설정으로 가장 많이 사용되는 속성값은 relative 이다.
+        어느 정도이냐면 "relative의 주용도는 위치이동이 아니라 기준점 설정이다"라고 말할 정도이다.
+       */
+      width: 500px;
+      height: 500px;
+      margin-top: 300px;
+      background-color: pink;
+    }
+
+    .parent>.child {
+      display: block;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 150px;
+      height: 80px;
+      color: white;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="standard">
+    <span class="abs">포지셔닝<br />박스</span>
+  </h1>
+
+  <p class="parent">
+    <strong class="child">실험</strong>
+  </p>
+</body>
+
+</html>

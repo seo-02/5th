@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>두잇자바스크립트</title>
+  <script>
+    let today = new Date();//현재시간 정보를 가져와서 변수에 할당
+
+    const year = today.getFullYear();//년
+    const month = today.getMonth() + 1;//월
+    const date = today.getDate();//일
+
+    console.log(year + '년');
+    console.log(month + '월');
+    console.log(date + '일');
+
+    //안쌤의 자바스크립트 출판일 계산기
+    const now = new Date();
+
+    //const someDay = new Date('2022/2/3');//출판예정일
+    //const someDay = new Date(2022,2-1,3);//출판예정일
+    const someDay = new Date(now.getFullYear(), 2 - 1, 3);//출판예정일
+
+    //출판예정일과 현재시간의 시간차(밀리세컨즈)
+    const gapTime = someDay.getTime() - now.getTime();
+
+    //남은날 계산 = gapTime / 하루밀리세컨즈(86400000)
+    const dDay = Math.ceil(gapTime / (24 * 60 * 60 * 1000));
+
+    document.write("출판일까지 " + dDay + '일 남았습니다.');
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

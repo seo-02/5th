@@ -1,0 +1,101 @@
+#wrap > header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  border-bottom: 3px solid gold;
+  background-color: pink;
+}
+
+#wrap > header > .container {
+  position: relative;
+  z-index: 100;
+  background-color: pink;
+}
+
+#wrap > header > .container > nav {
+  width: 240px;
+  margin: 0 auto;
+}
+
+#wrap > header > .container > nav > .gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+#wrap > header > .container > nav > .gnb > li {
+  width: 80px;
+}
+
+#wrap > header > .container > nav > .gnb > li:hover > a,
+#wrap > header > .container > nav > .gnb > li.on > a {
+  color: #fff;
+  font-weight: 800;
+}
+
+#wrap > header > .container > nav > .gnb > li > a {
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+#wrap > header > .bg_lnb {
+  position: absolute;
+  left: 50%;
+  top: -400px;
+  width: 1120px;
+  margin-left: calc(-1120px / 2);
+  background-color: #fff;
+}
+
+#wrap > header > .bg_lnb > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 232px;
+  text-indent: -9999px;
+  background-image: url(./../images/gnb_icon_set.png);
+  background-position: center 0;
+  border: 3px solid #ccc;
+}
+
+#wrap > header > .bg_lnb > p > a {
+  display: block;
+  width: calc(1120px / 2);
+  height: 232px;
+  text-indent: -9999px;
+}
+
+#wrap > header > .bg_lnb > p > a.left:hover {
+  cursor: url(./../images/arrow_l.935a967c.cur), auto;
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+#wrap > header > .bg_lnb > p > a.right:hover {
+  cursor: url(./../images/arrow_r.1db549d7.cur), auto;
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+#wrap > section, #wrap article {
+  height: 500px;
+  font-size: 100px;
+  line-height: 500px;
+  text-align: center;
+}
+
+#wrap > section {
+  margin-top: 100px;
+  background-color: #befcb1;
+}
+
+#wrap > article {
+  background-color: #b785c7;
+}
+/*# sourceMappingURL=style.css.map */

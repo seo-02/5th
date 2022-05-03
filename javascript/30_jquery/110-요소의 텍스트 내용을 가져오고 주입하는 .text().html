@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>110-요소의 텍스트 내용을 가져오고 주입하는 .text()</title>
+  <style>
+    #wrap {
+      text-align: center;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    $(function () {
+      //버튼을 클릭하면 h1요소의 내용을 alert으로 출력
+      $('button').on('click', function () {
+        alert($('h1').text());//텍스트를 가져온다.
+
+        //h2의 텍스트 내용를 'click success~!'로 대체
+        $('h2').text('click success~!');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>textContent => text()</h1>
+
+    <h2>?</h2>
+
+    <button>클릭하세요</button>
+  </div>
+</body>
+
+</html>

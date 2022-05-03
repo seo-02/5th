@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>210-요소의 바깥쪽 간격 margin</title>
+  <style>
+    /* CSS 리셋 - 약식초기화 */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #dokdo {
+      width: 800px;
+      height: 400px;
+      font-size: 0;
+      border: 1px solid blue;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    /* .seodo와 .dongdo를 검정테두리를 가진 250*180px 크기로 만들어 inline-block으로 만드시오. */
+    .seodo,
+    .dongdo {
+      display: inline-block;
+      width: 250px;
+      height: 180px;
+      color: white;
+      border: 1px solid black;
+    }
+
+    .seodo {
+      background-image: url(./images/seodo-250.jpg);
+    }
+
+    .dongdo {
+      background-image: url(./images/dongdo-250.jpg);
+    }
+
+    .bochal {
+      width: 80px;
+      height: 50px;
+      background-image: url(./images/bochal.jpg);
+      border: 1px solid black;
+    }
+
+    /* .seodo에 위로 50px, 오른쪽으로 100px, 아래로 30px, 왼쪽으로 100px의 바깥쪽 간격을 설정해 보자 */
+    .seodo {
+      margin-top: 50px;
+      margin-right: 100px;
+      margin-bottom: 30px;
+      margin-left: 100px;
+
+      /* 작성순서는 top right bottom left */
+      margin: 50px 100px 30px 100px;
+    }
+
+    .dongdo {
+      margin-left: 51px;
+    }
+
+    .bochal {
+      margin-left: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="dokdo">
+    <p class="seodo">서도</p>
+    <p class="dongdo">동도</p>
+    <p class="bochal">보찰바위</p>
+  </div>
+</body>
+
+</html>

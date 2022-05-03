@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>홍길동-디지털디자인-프로젝트설계</title>
+  <style>
+    h1 {
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+    }
+
+    .cal-container {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .cal-container input {
+      height: 50px;
+      text-align: center;
+      border: 1px solid #000;
+      border-radius: 10px;
+    }
+
+    .cal-container button {
+      background: none;
+      border: none;
+      outline: none;
+
+      margin-left: 30px;
+      padding: 17px 30px;
+      background-color: #ccc;
+      border: 1px solid #000;
+      border-radius: 10px;
+    }
+
+    .cal-container button:hover {
+      cursor: pointer;
+    }
+
+    .cal-container span {
+      display: block;
+      height: 50px;
+      margin-top: 5px;
+      padding: 15px 30px;
+      border: 1px solid #000;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+  <script>
+    //자연어로 시나리오 로직 작성하기
+    /**
+      1. 사용자가 반지름을 입력하고 계산버튼을 누른다.
+        => 계산버튼 DOM 선택
+        => 계산버튼에 대한 click 이벤트 구문 작성
+
+      2. 사용자가 입력한 값(반지름)을 가져온다. 
+        => Number() 변환
+
+      3. 원의 넓이를 구한 후 화면에 출력 => .textContent
+      4. 원의 둘레를 구한 후 화면에 출력 => .innerHTML
+    */
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>원의 넓이와 둘레 계산</h1>
+    <div class="cal-container">
+      <p>
+        반지름 <br />
+        <input type="text" placeholder="정수로 입력하세요" />
+        <button>계산</button>
+      </p>
+      <hr />
+
+      <p>원의 넓이 : <span class="area">?</span></p>
+      <p>원의 둘레 : <span class="round">?</span></p>
+    </div>
+  </div>
+
+  <script>
+    //원의 둘레 : 2 * Math.PI * r
+    //원의 넓이 : Math.PI * r * r
+    const $btn = document.querySelector('button');
+    const $r = document.querySelector('input');
+
+    const $area = document.querySelector('.area');
+    const $round = document.querySelector('.round');
+
+    $btn.addEventListener('click', function () {
+      //반지름
+      const r = Number($r.value);
+
+      const area = Math.PI * r * r;
+      const round = Math.PI * r * 2;
+
+      $area.textContent = area;
+      $round.innerHTML = round;
+    });
+  </script>
+</body>
+
+</html>

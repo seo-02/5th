@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+#wrap{
+    width: calc(74px * 9 + 40px);
+    margin: 0 auto;
+}
+
+section>.thmbs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+}
+
+section>.thmbs>li{
+    width: 74px;
+}
+
+section>.thmbs>li>a{
+    display: block;
+    height: 74px;
+}
+
+section img{
+    display: block;
+    width: 100%;
+}
+
+address{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}

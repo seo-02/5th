@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>70-리액트 방식의 데이터 업데이트</title>
+  <style>
+    h1 {
+      width: 260px;
+      height: 40px;
+      margin: 0 auto;
+      padding: 20px 30px;
+      line-height: 40px;
+      text-align: center;
+      border: 5px dotted pink;
+    }
+  </style>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root">
+    <!-- <h1>09 : 48 : 50</h1> -->
+  </div>
+
+  <script type="text/babel">
+    // 백틱을 이용한 출력
+    // console.log(hh + ' : ' + mm + ' : ' + ss);//9 : 48 : 50
+    // console.log(`9 : 48 : 50`);
+    // console.log(`${hh} : ${mm} : ${ss}`);
+
+    //한자리 숫자의 경우 앞에 '0'을 붙여서 리턴하는 함수
+    /*
+        경우의 수
+          1.매개변수에 한자리 숫자가 들어올 경우
+            3 -> 00 + 3 => 003(전체길이 3)
+            '003'.substr(1,2);//03
+
+          2.매개변수에 두자리 숫자가 들어올 경우
+            28 -> 00 + 28 => 0028(전체길이 4)
+            '0028'.substr(2,2);//28
+
+        넘겨받은 매개변수에 무조건 '00'을 붙인후 뒤에서 2자리만 리턴
+        .substr() : 문자열에서 지정한 개수만큼 문자를 리턴함
+        .substr(newTime.length-2,2)
+    */
+    const zeroFn = function (time) {
+      const newTime = '00' + time;
+      return newTime.substr(newTime.length - 2, 2)
+    };
+
+    setInterval(function () {
+
+      const today = new Date();//현재시간 정보를 가져와서 변수에 할당
+
+      const hh = zeroFn(today.getHours());//시
+      const mm = zeroFn(today.getMinutes());//분
+      const ss = zeroFn(today.getSeconds());//초
+
+      // const hh = zeroFn(3);//시  03
+      // const mm = zeroFn(28);//분 28
+      // const ss = zeroFn(5);//초  05   
+
+      const $h1 = <h1>{hh} : {mm} : {ss}</h1>;
+
+      ReactDOM.render($h1, document.getElementById('root'));
+
+    }, 1000);
+
+  </script>
+</body>
+
+</html>

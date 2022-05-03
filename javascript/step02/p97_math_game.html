@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>숫자맞추기 게임</title>
+  <script>
+    /*
+      사용자가 0에서 10사이의 정수를 prompt()를 이용하여 입력하면
+      진짜숫자로 변환후 컴퓨터가 추출한 0~10 사이의 정수값과 다중 if문으로 비교하여 
+
+      1. 일치하면 '정답~! 금손을 가지셨네요~!'
+      2. 사용자수가 크면 '컴퓨터가 선택한 수보다 조금 크네요~!'
+      3. 사용자수가 작으면 '컴퓨터가 선택한 수보다 조금 작네요~!'
+      4. 사용자가 숫자가 아닌 이상한 값을 넣었을 경우 '도대체 무슨 값을 입력한 거에요?'
+
+      라고 alert()으로 출력하는 코드를 작성하시오.
+    */
+
+    const comNum = Math.floor(Math.random() * 11);
+    console.log(comNum)
+    const userNum = Number(prompt('0~10 사이의 정수를 입력하세요.'));
+
+    //일치연산자를 이용한 비교
+    if (userNum === comNum) {
+      alert('정답~! 금손을 가지셨네요~!');
+    } else if (userNum > comNum) {
+      alert('컴퓨터가 선택한 수보다 조금 크네요~!');
+    } else if (userNum < comNum) {
+      alert('컴퓨터가 선택한 수보다 조금 작네요~!');
+    } else {
+      alert('도대체 무슨 값을 입력한 거에요?');
+    }
+
+    //브라우저의 reflash 버튼을 누른 효과
+    location.reload();
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

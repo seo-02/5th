@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>340-목록을 의미하는 ul, ol</title>
+  <style>
+    #wrap {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    ul {
+      list-style: none;
+      list-style: circle;
+      list-style: decimal;
+
+      /*기본값*/
+      list-style: disc;
+    }
+
+    ul>li {
+      list-style: inherit;
+      list-style: square;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>독도 바로알기</h1>
+
+    <h2>독도의 위치와 영역</h2>
+    <ul>
+      <li>우리나라와 세계속에서 독도의 위치 파악</li>
+      <li>우리나라 영역에서 독도의 중요성 설명</li>
+      <li>'독도가 보인다는 것'의 의미</li>
+    </ul>
+
+    <h2>독도는 어디에 있나요?</h2>
+    <ol>
+      <li>독도의 위치는 어디인가요?</li>
+      <li>독도는 한반도에서 얼마나 멀리 떨어져 있나요?</li>
+      <li>국가의 영역은 어디까지인가요?</li>
+      <li>우리나라 영해는 어디까지 인가요?</li>
+      <li>배타적 경제수역은 무엇인가요?</li>
+    </ol>
+
+    <hr />
+
+    <h2>이중구조의 ul, ol</h2>
+    <nav>
+      <ol class="gnb">
+        <li>
+          <a href="#">체험관소개</a>
+
+          <!-- ul.lnb>li*4>a[href=#] -->
+          <ul class="lnb">
+            <li><a href="#">인사말</a></li>
+            <li><a href="#">관람안내</a></li>
+            <li><a href="#">MI소개</a></li>
+            <li><a href="#">오시는길</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">전시안내</a></li>
+
+        <li><a href="#">관람예약</a></li>
+
+        <li><a href="#">열린광장</a></li>
+      </ol>
+    </nav>
+  </div>
+</body>
+
+</html>

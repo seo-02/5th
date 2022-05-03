@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+body {
+	font-size: 14px;
+	background-color: #f5f5f5;
+}
+
+#wrap {
+	width: 500px;
+	margin: 0 auto;
+	padding-bottom: 100px;
+}
+
+form > fieldset {
+	margin-bottom: 10px;
+	background-color: #fff;
+	border: 1px solid #dedede;
+}
+
+form > fieldset > legend {
+	display: block;
+	margin-left: 10px;
+	padding: 0 5px;
+}
+
+form > fieldset > ul > li {
+	padding: 10px;
+	line-height: 25px;
+	border-bottom: 1px solid #dedede;
+}
+
+form > fieldset > ul > li:last-child {
+	border: none;
+}
+
+form > fieldset > ul > li > .info {
+	display: none;
+}
+
+form > fieldset > ul > li > .tit {
+	display: inline-block;
+	width: 80px;
+	padding-left: 6px;
+	line-height: 35px;
+}
+
+form > fieldset > ul > li > .tit-email {
+	display: inline-block;
+	width: 120px;
+	padding-left: 6px;
+	line-height: 35px;
+}
+
+/* 스프라이트 이미지를 활용한 라디오버튼 변형 */
+form > fieldset > ul > li > .radio {
+	margin-right: 20px;
+}
+
+form > fieldset > ul > li > .radio > input {
+	display: none;
+}
+
+form > fieldset > ul > li > .radio > input:checked + label:before {
+	background-position: 0 0;
+}
+
+form > fieldset > ul > li > .radio > label:before {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: -2px;
+	width: 23px;
+	height: 23px;
+	background-image: url(./../images/icon_radiobutton.png);
+	background-position: 0 -23px;
+	content: '';
+}
+
+form > fieldset > ul > li > .radio > label {
+	position: relative;
+	padding-left: 30px;
+	/* line-height: 35px; 수정 */
+	cursor: pointer;
+	/* border: 1px solid #000; */
+}
+
+/* CSS로 사각스위치 형식으로 라디오버튼 변형 */
+form > fieldset > ul > li > .radio-switch {
+	display: inline-block;
+	width: 70px;
+	border: 1px solid #dedede;
+}
+
+form > fieldset > ul > li > .radio-switch > input {
+	display: none;
+}
+
+form > fieldset > ul > li > .radio-switch > input:checked + label {
+	color: #fff;
+	background-color: #0275d8;
+}
+
+form > fieldset > ul > li > .radio-switch > label {
+	/* 수정 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+
+	cursor: pointer;
+}
+
+/* 체크박스 디자인 */
+form > fieldset > ul > li > .chkbox {
+	margin-right: 20px;
+}
+
+form > fieldset > ul > li > .chkbox > input {
+	display: none;
+}
+
+form > fieldset > ul > li > .chkbox > input:checked + label:before {
+	background-position: 0 0;
+}
+
+form > fieldset > ul > li > .chkbox > label:before {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 1px;
+	width: 19px;
+	height: 19px;
+	background-image: url(./../images/icon_checkbox.png);
+	background-position: 0 -19px;
+	content: '';
+}
+
+form > fieldset > ul > li > .chkbox > label {
+	position: relative;
+	padding-left: 25px;
+	/* line-height: 35px; 수정 */
+	cursor: pointer;
+}
+
+/* 생일 - select 디자인 */
+form > fieldset > ul > li > select {
+	width: 100px;
+	height: 25px;
+	margin-right: 3px;
+	padding-left: 10px;
+	background-image: url(./../images/select_arr.png);
+	background-position: 83px center;
+	background-repeat: no-repeat;
+
+	appearance: none; /*기본스타일 제거*/
+
+	border: 1px solid #dedede;
+	outline: none;
+}
+
+/* 이메일 수신동의 스위치 */
+form > fieldset > ul > li > .switch > input {
+	display: none;
+}
+
+form > fieldset > ul > li > .switch > input:checked + label {
+	background-color: rgb(50, 206, 71);
+}
+
+form > fieldset > ul > li > .switch > label {
+	display: inline-block;
+	position: relative;
+	width: 48px;
+	height: 25px;
+	text-indent: -9999px;
+	background-color: #ddd;
+	border-radius: 13px;
+}
+
+form > fieldset > ul > li > .switch > input:checked + label:after {
+	left: 24px;
+}
+
+form > fieldset > ul > li > .switch > label:after {
+	display: block;
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 23px;
+	height: 23px;
+	background-color: #fff;
+	/* border: 1px solid #000; */
+	border-radius: 50%;
+	content: '';
+}
+
+form input[type=email]:focus,
+form input[type=text]:focus,
+form input[type=password]:focus {
+	background-color: lightgoldenrodyellow;
+}
+
+form input[type=text]:focus + .info,
+form input[type=password]:focus + .info {
+	display: block;
+	color: red;
+	text-indent: 6px;
+	font-size: 12px;
+}
+
+form input[type=email],
+form input[type=text],
+form input[type=password] {
+	width: 466px;
+	height: 15px;
+	padding: 5px 6px;
+	border: none;
+	outline: none;
+}
+
+form input[type=password] {
+	background-image: url(./../images/lock_ico.png);
+	background-position: right 1px;
+	background-repeat: no-repeat;
+}
+
+form input[type=date] {
+	height: 25px;
+	padding: 0 6px;
+	border: 1px solid #dedede;
+	outline: none;
+}
+
+form textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #dedede;
+	box-sizing: border-box;
+	outline: none;
+}
+
+/* 취소, 확인 버튼 디자인 */
+form > p > button {
+	/* 버튼디자인시 무조건 3요소 먼저 작성 */
+	background: none;
+	border: none;
+	outline: none;
+
+	width: 246px;
+	height: 60px;
+	color: #fff;
+	font-size: 20px;
+	background-color: #999;
+}
+
+form > p > button[type="submit"] {
+	background-color: rgb(50, 206, 71);
+}

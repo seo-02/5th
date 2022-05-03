@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>50_순수_자바스크립트로_HTML요소_생성</title>
+</head>
+
+
+
+
+
+
+<body>
+  <h1>순수 자바스크립트로 HTML 태그 생성</h1>
+
+  <!-- 같은의미 다른표현 : 요소 =엘리먼트= 선택자= 태그= dom= node -->
+  <hr />
+
+
+  <script>
+    //1. h1 엘리먼트 생성
+    const $h1 = document.createElement('h1');
+
+    //2. 텍스트노드 생성
+    const $text = document.createTextNode('안녕, 자바스크립트~!');
+
+    //3. 생성한 텍스트노드를 h1의 마지막 자식으로 붙인다.
+    $h1.appendChild($text);
+
+    //4. h1엘리먼트를 body의 마지막 자식으로 붙인다.
+    document.body.appendChild($h1);
+  </script>
+</body>
+
+</html>

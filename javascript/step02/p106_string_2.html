@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>문자열 메소드</title>
+  <script>
+    let url = "      http://www.auction.co.kr/default.html       ";
+    console.log('url 변수의 길이는', url.length);
+
+    //앞뒤에 공백을 제거후 재할당
+    url = url.trim();
+    console.log('trim()후 url 변수의 길이는', url.length);
+
+
+    //도메인얻기(원하는 글자수만큼 추출하기)
+    //url.substring(시작인덱스,끝인덱스+1);
+    const pos_1 = url.indexOf('/', 7);//20
+    const domain = url.substring(7, pos_1);
+    document.write('domain = ' + domain + '<br />');
+
+
+    //파일명얻기(원하는 글자수만큼 추출하기)
+    const pos_2 = url.lastIndexOf('/');
+    const pos_3 = url.lastIndexOf('.');
+
+    const filename = url.slice(pos_2 + 1, pos_3);
+    document.write('filename = ' + filename + '<br />');
+
+
+    //확장자명얻기(원하는 글자수만큼 추출하기)
+    //.slice(begin,end)형식인데 .slice(begin)처럼 end 생략시에는 begin부터 끝까지 다 가져온다.
+    let extname = url.slice(pos_3 + 1)//'jsp'
+    document.write('extname = ' + extname + '<br />');
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

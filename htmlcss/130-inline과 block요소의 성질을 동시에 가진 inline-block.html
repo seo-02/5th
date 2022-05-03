@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>130-inline과 block요소의 성질을 동시에 가진 inline-block</title>
+  <style>
+    /* 퀴즈) h1 태그의 글자크기를 20px로 하고 가로중앙 정렬하시오. */
+    h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    /* 퀴즈) p태그를 검정색 1px 테두리를 가진 100*100px의 박스로 만드시오 */
+    p {
+      /* 박스에 크기를 부여하면서 인라인요소처럼 나란히 표시 */
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+
+    /* 퀴즈) 두 개의 박스중 서도의 배경이미지로 seodo.jpg, dongdo는 dongdo.jpg를 넣으시오. */
+    p.seodo {
+      background-image: url(./images/seodo.jpg);
+      background-size: cover;
+    }
+
+    p.dongdo {
+      background-image: url(./images/dongdo.jpg);
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>독도는 2개의 섬으로 구성</h1>
+    <p class="seodo">서도</p>
+    <p class="dongdo">동도</p>
+    <!-- 
+      요소간의 줄바꿈은 한칸의 공백으로 인식되기 때문에 한칸만큼 떨어져 있게 된다.
+     -->
+  </div>
+
+</body>
+
+</html>

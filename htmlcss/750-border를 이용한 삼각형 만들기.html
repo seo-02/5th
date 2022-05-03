@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>750-border를 이용한 삼각형 만들기</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        .triangle1{
+            display: block;
+            /* 1단계 - 크기를 0 으로 만든다. */
+            width: 0px;
+            height: 0px;
+            margin: 0 auto;
+
+            /* 2단계 - border 속성을 각각 지정한다. */
+            border-width:100px ;
+            border-style:solid ;
+            border-color: red transparent transparent transparent;
+        }
+
+        .triangle1:hover{border-top-color: blue;}
+
+        .triangle2{
+            display: block;
+            /* 1단계 - 크기를 0 으로 만든다. */
+            width: 0px;
+            height: 0px;
+            margin: 0 auto;
+
+            /* 2단계 - border 속성을 각각 지정한다. */
+            border-width:100px ;
+            border-style:solid ;
+            border-color: transparent blue transparent transparent;
+        }
+
+        .triangle3{
+            display: block;
+            /* 1단계 - 크기를 0 으로 만든다. */
+            width: 0px;
+            height: 0px;
+            margin: 0 auto;
+
+            /* 2단계 - border 속성을 각각 지정한다. */
+            border-width:100px ;
+            border-style:solid ;
+            border-color: transparent transparent gray transparent;
+        }
+
+        .triangle4{
+            display: block;
+            /* 1단계 - 크기를 0 으로 만든다. */
+            width: 0px;
+            height: 0px;
+            margin: 0 auto;
+
+            /* 2단계 - border 속성을 각각 지정한다. */
+            border-width:100px ;
+            border-style:solid ;
+            border-color: transparent transparent transparent pink;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">css로 삼각형 만들기</h1>
+
+        <p>
+            <span class="triangle1"></span>
+            <span class="triangle2"></span>
+            <span class="triangle3"></span>
+            <span class="triangle4"></span>
+        </p>
+    </div>
+</body>
+</html>

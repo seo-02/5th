@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1010-textarea 여러줄 입력</title>
+  <style>
+    textarea {
+      resize: none;
+    }
+
+    th {
+      width: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>메모장처럼 여러줄 입력</h1>
+
+    <form action="./980-action-page.html" method="post">
+      <fieldset>
+        <legend>자기소개</legend>
+
+        <table>
+          <tr>
+            <th scope="row"><label for="introduce">소개글</label></th>
+            <td>
+              <textarea name="introduce" id="introduce" cols="50" rows="10"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button>전송하기</button>
+              <button type="reset">다시작성</button>
+            </td>
+          </tr>
+        </table>
+
+
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>

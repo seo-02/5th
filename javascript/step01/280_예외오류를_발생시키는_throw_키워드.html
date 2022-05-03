@@ -1,0 +1,47 @@
+<!--
+ * 오류의 종류
+ * 
+ * 1. 문법오류(SyntaxError) - 자동으로 발견되기 때문엥 수정이 가장 쉽다.
+ * 2. 논리오류 - 코드작성자의 잘못된 논리의 흐름으로 발생한것이기 때문에 자동발견X, 가장 수정(발견)하기 어렵다.
+ * 3. 예외오류 - 인터넷끊김으로 인한 서버데이터 전송오류, 저장장치에서 파일을 읽어오거나 저장할때 물리적인 원인으로 발생하는 오류처럼 작성된 코드와 관게없이 발생하는 오류
+-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>280_예외오류를_발생시키는_throw_키워드</title>
+</head>
+
+<body>
+  <h1>자바스크립트 오류</h1>
+
+  <script>
+    //Uncaught - 오류가 발생했는데 
+    //console.log(number);//Uncaught ReferenceError: number is not defined
+
+    //두개의 매개변수 coin_1, coin_2를 갖는 saveFn  함수를 표현식으로 작성하시오.!
+    const saveFn = function (coin_1, coin_2) {
+
+      //데이터타입 확인방법
+      console.log(typeof (coin_1));
+      console.log(typeof coin_2);
+
+
+      //전달받은 데이터에 대한 검증작업 보완 -> 유효성검사
+      //coin_1 또는 coin_2가 number 타입이 아니면 에러를 강제로 발생시킨다(던진다).
+      if (typeof coin_1 !== 'number' || typeof coin_2 !== 'number') {
+        throw '데이터는 반드시 number type 이어야 합니다.';//에러메세지 출력과 동시에 정지
+      }
+
+
+      let sum = coin_1 + coin_2;
+      console.log(sum + '원');
+    }
+
+    saveFn(1000, '이천');//여기서 에러가 발생하기 때문에 프로그램 정지됨(아래 43라인은 실행되지 않음)
+    saveFn(1000, 2000);
+  </script>
+</body>
+
+</html>

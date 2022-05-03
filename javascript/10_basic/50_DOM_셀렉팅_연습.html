@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 셀렉팅 연습</title>
+</head>
+<body>
+    <h1 id="tit">세계 여러나라의 인사말</h1>
+    <dl>
+        <dt><strong>토속방언</strong> 버전</dt>
+        <dd class="nation greeting">한국 - 식사하셧습니까? 하모~</dd>
+        <dd class="nation greeting">중국 - 츠팔러마? 츠팔러</dd>
+        <dd class="nation greeting">
+            <strong>부시족</strong> 리얼싸운드 - 
+            <strong>일렌트로캉막따따라바오리도? 따따라!</strong>		
+        </dd>
+    </dl>
+    
+    <hr />
+    
+    <h2 id="publisher">웹퍼블리셔로 가는길</h2>
+    <ul id="list">
+        <li class="item">HTML5 & CSS3</li>
+        <li class="item">자바스크립트</li>
+        <li class="item"><em>jQuery</em></li>
+        <li class="item">포토샵/일러스트</li>
+        <li class="item"><em>웹디자인기능사</em></li>
+    </ul>
+
+    <script>
+        /**
+         * 브라우저의 페이지 렌더링 순서
+         * 
+         * 1. DOM Tree 구성(뼈대)
+         * 2. 각각의 DOM에 내용을 붙임
+         * 3. 이벤트 구문을 작성하려면 반드시 DOM을 선택해야 한다.
+         * 4. 그런데 DOM Tree 구성이 완료되어야 DOM을 선택할 수 있다.
+        */
+
+        //1. id를 이용해서 DOM을 선택 ★★★
+        const $h1 = document.getElementById('tit');
+        console.log('$h1 =', $h1);
+
+
+
+        //2. class를 이용해서 DOM을 선택(실무X)
+        const $nation = document.getElementsByClassName('nation');
+        console.log('$nation =',$nation);
+        console.dir($nation);
+
+
+        //3. TagName을 이용해서 DOM을 선택(실무X)
+        const $li = document.getElementsByTagName('li');
+        
+        //배열이나 객체에 저장된 값을 구조적으로 출력하고 싶을 때 console.dir() 사용
+        console.dir($li);
+
+        
+
+
+        console.log('------------------');
+
+
+        //4. CSS 방식으로 하나만 선택하는 .querySelector() ★★★
+        //여러개일 경우 맨처음 요소 하나만 선택됨(나머지는 무시)
+        const $publisher = document.querySelector('#publisher');//id 이용
+        const $greeting = document.querySelector('.greeting');//class 이용
+        const $strong = document.querySelector('strong');//tagName 이용
+
+        console.log($publisher);
+        console.log($greeting);
+        console.log($strong);
+
+
+        console.log('------------------');
+
+
+        //5. CSS 방식으로 여러개 선택하는 .querySelectorAll() ★★★
+        //무조건 배열 형식으로 저장됨, 하나만 있는 요소도 예외없이 배열 형식으로 저장됨
+        const $list = document.querySelectorAll('#list');//id 이용
+        const $item = document.querySelectorAll('.item');//class 이용
+        const em = document.querySelectorAll('em');//tagName 이용
+
+        console.log($list);
+        console.log($item);
+        console.log(em);
+
+    </script>
+</body>
+</html>

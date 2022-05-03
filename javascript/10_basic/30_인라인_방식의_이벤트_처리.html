@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>인라인 방식의 이벤트 처리</title>
+    <style>
+        #wrap{text-align: center;}
+        h1{line-height: 100px;}
+        img{border: 1px solid #000;}
+        button{padding: 20px 15px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 
+            이벤트처리는 사용자의 특정 행위에 따라 반응하는 코드를 작성하는 것
+
+            이벤트핸들러 - 이벤트가 발생했을 때 실행될 함수
+         -->
+        <h1 onclick="msgFn('복권 1등 당첨~!');">클릭하면 복권 당첨</h1>
+
+        <p>
+            <!-- 이미지를 클릭했을 때 msgFn 함수에 '독도는 우리땅' 문자열을 전달하시오 -->
+            <!-- click 이벤트가 발생했을 때 실행될 이벤트핸들러(함수)를 등록함 -->
+            <img onclick="msgFn('독도는 우리땅~!');" src="./../images/kakaofriends.png" alt="#" />
+
+            <br />
+
+            <button onclick="alert('열심히 공부합시다~!');">클릭하면 올해 취업성공~!</button>
+        </p>
+    </div>
+
+    <script>
+        //텍스트문장을 매개변수 msg로 전달받아 alert()으로 출력하는 msgFn 표현식 함수를 선언하시오.
+
+        const msgFn = function(msg){
+            alert(msg);
+        };
+
+        //msgFn('당첨~!');
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1090-keyframes을 이용한 애니메이션</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <style>
+    @keyframes mybox {
+
+      /* 진행률 0%, ~부터 */
+      from {
+        width: 100px;
+      }
+
+      /* 진행률 100%, ~까지 */
+      to {
+        width: 500px;
+      }
+
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      background-color: yellow;
+
+      animation-name: mybox;
+      animation-duration: 2s;
+
+      /*무한반복*/
+      animation-iteration-count: infinite;
+
+      /* 반대방향으로 작동 */
+      animation-direction: alternate;
+
+      /* 속도 */
+      animation-timing-function: ease-in-out;
+
+      /* 지연시간 */
+      animation-delay: 2s;
+    }
+
+
+    @keyframes mycircle {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      50% {
+        transform: translate(200px, 300px) rotate(1250deg);
+      }
+
+      100% {
+        transform: translate(500px, 400px) rotate(2360deg);
+      }
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      background-color: pink;
+      border-radius: 50%;
+
+      animation: mycircle 2s infinite alternate 0s;
+    }
+
+    .circle:hover {
+      cursor: pointer;
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">keyframes을 이용한 애니메이션</h1>
+
+    <section>
+      <p class="box">박스</p>
+
+      <p class="circle">원</p>
+    </section>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>60-순수 자바스크립트 방식의 데이터 업데이트</title>
+  <style>
+    h1 {
+      width: 260px;
+      height: 40px;
+      margin: 0 auto;
+      padding: 20px 30px;
+      line-height: 40px;
+      text-align: center;
+      border: 5px dotted pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <!-- <h1>09 : 48 : 50</h1> -->
+  </div>
+
+  <script>
+    // 백틱을 이용한 출력
+    // console.log(hh + ' : ' + mm + ' : ' + ss);//9 : 48 : 50
+    // console.log(`9 : 48 : 50`);
+    // console.log(`${hh} : ${mm} : ${ss}`);
+
+    setInterval(function () {
+
+      const today = new Date();//현재시간 정보를 가져와서 변수에 할당
+
+      // const hh = 11;//시
+      // const mm = 10;//분
+      // const ss = 30;//초
+
+      const hh = today.getHours();//시
+      const mm = today.getMinutes();//분
+      const ss = today.getSeconds();//초
+
+
+      document.getElementById('root').innerHTML = `<h1>${hh} : ${mm} : ${ss}</h1>`;
+
+    }, 1000);
+
+  </script>
+</body>
+
+</html>

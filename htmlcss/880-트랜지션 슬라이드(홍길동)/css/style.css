@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.slides {
+	display: flex;
+	width: calc(150px * 7);
+	margin: 0 auto;
+}
+
+.slides > p {
+	overflow: hidden;
+	width: 150px;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.slides > p:hover {
+	width: 680px;
+}
+
+.slides > p > img {
+	display: block;
+}

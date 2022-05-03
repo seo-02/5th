@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>240-부모 자식간의 margin 통합현상</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <style>
+    .parent {
+      width: 600px;
+      height: 600px;
+      background-color: yellow;
+
+      /* 
+        해결방법-1)
+        부모 상위요소에 밀 벽이 없어서 생기는 마진통합현상은
+        부모의 상단에 투명테두리를 만들거나 내용이 있으면
+        자동으로 해결된다.
+      */
+
+      /* 
+        border-top: 1px solid transparent;
+        box-sizing: border-box; //테두리를 안쪽으로 형성하게 함(박스의 크기에 영향을 미치지 않음)
+      */
+    }
+
+    .parent>.child {
+      /*       
+        해결방법-2)
+        마진을 적용할 자식요소에 d:ib으로 설정
+      */
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin-top: 100px;
+      color: white;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="parent">
+    <!-- 여기에 내용이 있으면 정상작동 -->
+    <p class="child">자식</p>
+  </div>
+</body>
+
+</html>

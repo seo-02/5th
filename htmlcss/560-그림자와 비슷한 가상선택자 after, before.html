@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>560-그림자와 비슷한 가상선택자 :after, :before</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+
+  <style>
+    body {
+      overflow-y: scroll;
+    }
+
+    #wrap {
+      width: 730px;
+      margin: 0 auto;
+    }
+
+    /* 주의 : 검색엔진의 검색결과에 포함되지 않는다. */
+    h1:before {
+      content: "앞 그림자 ";
+    }
+
+    h1:after {
+      /* 11점 */
+      content: " 뒷 그림자";
+    }
+
+    h1::before {
+      font-size: 25px;
+      content: "경상북도경찰청 ["
+    }
+
+    h1::after {
+      /* 11점 */
+      font-size: 25px;
+      content: "]에 응원글을 남겨주세요~!";
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center"><a href="https://bit.ly/2YcyaIT" target="_blank">독도경비대</a></h1>
+    <figure>
+      <img src="./images/독도경비대.gif" alt="독도경비대">
+      <figcaption>&lt;자료제공 : 경상북도경찰청&gt;</figcaption>
+    </figure>
+  </div>
+</body>
+
+</html>

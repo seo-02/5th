@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1000-select 드롭다운 목록</title>
+  <style>
+    li {
+      margin-bottom: 20px;
+    }
+
+    select#nation {
+      width: 200px;
+      height: 30px;
+      padding-left: 20px;
+      color: rgb(36, 148, 192);
+      font-size: 18px;
+      border: 1px solid rgb(36, 148, 192);
+      border-radius: 3px;
+    }
+
+    select#worldcup {
+      width: 200px;
+      height: 30px;
+      padding-left: 20px;
+      color: rgb(36, 148, 192);
+      font-size: 18px;
+      border: 1px solid rgb(36, 148, 192);
+      border-radius: 3px;
+
+      /* 셀렉트의 화살표 제거 */
+      appearance: none;
+    }
+
+    select#dokdo {
+      width: 200px;
+      height: 30px;
+      padding-left: 20px;
+      color: rgb(36, 148, 192);
+      font-size: 18px;
+      border: 1px solid rgb(36, 148, 192);
+      border-radius: 3px;
+
+      /* 셀렉트의 화살표 제거 */
+      appearance: none;
+
+      /* 화살표아이콘 변경 */
+      background-image: url(./images/select_arrow.png);
+      background-position: 95% 50%;
+      background-size: 22px;
+      background-repeat: no-repeat;
+    }
+
+    /* 선택된 option 스타일 변경 */
+    select#dokdo>option:checked {
+      background-color: beige;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>select 드롭다운 목록</h1>
+
+    <form action="./980-action-page.html" method="get">
+      <fieldset>
+        <legend>사용자정보</legend>
+
+        <ul>
+          <li>
+            <label for="username">이름 : </label>
+            <input style="outline:none;" type="text" id="username" name="username" autocomplete="off" />
+          </li>
+
+          <li>
+            <label for="area">거주지역 : </label>
+            <select name="area" id="area">
+              <option value="1">강서구</option>
+              <option value="2">강남구</option>
+              <option value="3">영등포구</option>
+            </select>
+          </li>
+
+          <li>
+            <label for="nation">가고싶은 나라 : </label>
+            <select name="nation" id="nation">
+              <option value="">선택하세요</option>
+              <option value="us">미국</option>
+              <option value="eng" selected>영국</option>
+              <option value="ge">독일</option>
+            </select>
+          </li>
+
+          <!-- 화살표 삭제 -->
+          <li>
+            <label for="worldcup">2022년 월드컵 개최지는? </label>
+            <select name="worldcup" id="worldcup">
+              <option value="">선택하세요</option>
+              <option value="1" selected>한국</option>
+              <option value="2">카타르</option>
+              <option value="3">스웨덴</option>
+              <option value="4">이탈리아</option>
+            </select>
+          </li>
+
+          <!-- 화살표아이콘 변경 -->
+          <li>
+            <label for="dokdo">독도는 어느나라 땅? </label>
+            <select name="dokdo" id="dokdo">
+              <option value="">선택하세요</option>
+              <option value="kr" selected>대한민국</option>
+              <option value="jp">일본</option>
+              <option value="cn">중국</option>
+              <option value="bn">베트남</option>
+            </select>
+          </li>
+
+          <li>
+            <button>전송하기</button>
+            <button type="reset">다시입력</button>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>

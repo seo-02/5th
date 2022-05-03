@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>70-인라인과 블럭요소의 형태(BoxModel)와 지배영역</title>
+  <!-- 
+    1. h1요소의 배경색을 pink로 하시오 
+    2. p태그에 파란색 실선 테두리를 나타내시오(1px)
+  -->
+
+  <!-- 
+    어떤 태그가 block(블럭)인지, inline(인라인)인지 구별하는 방법
+
+    1. border나 background-color를 적용해 보면 쉽게 구별 가능
+    2. 가로 100%를 차지한다면 블럭요소~!
+    3. 컨텐츠 양만큼만 차지한다면 인라인요소~!
+   -->
+
+  <style>
+    h1 {
+      background-color: pink;
+    }
+
+    p {
+      border: 1px solid blue;
+      text-align: center;
+    }
+
+    /* span, em, strong, img태그에 검정색 실선 테두리를 나타내시오(1px) */
+
+    /* ,(콤마) : 그룹선택자 */
+    span,
+    em,
+    strong,
+    img {
+      border: 1px solid black;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>독도는 우리땅 노래가사 변경</h1>
+
+  <p>전 : 울릉도 동남쪽 뱃길 따라 이백리</p>
+  <p>후 : 울릉도 동남쪽 뱃길 따라 87K</p>
+
+  <span>현재는</span>
+  <em>리와 같은 단위를 사용하지 않기 때문에</em>
+  <strong>Km로 바꾸어 표현</strong>
+
+  <img src="./images/독도경치-4-small.jpg" alt="독도경치">
+
+
+</body>
+
+</html>

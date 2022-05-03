@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>130_setTimeout()_setInterval()</title>
+  <style>
+    #wrap {
+      text-align: center;
+      padding-bottom: 150px;
+    }
+
+    .frame {
+      width: 200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .frame>img {
+      display: block;
+      width: 100%;
+    }
+
+    hr {
+      margin: 100px;
+    }
+  </style>
+
+  <script>
+
+
+    //.setTimeout()으로 폭탄 터트리기
+    window.addEventListener('DOMContentLoaded', function () {
+      const $bomb = document.querySelector('.bomb');
+      const $btnBomb = document.querySelector('.btnBomb');
+      let bombKey = null;
+
+      //window.setTimeout(익명함수, 시간);
+      //정해신 시간이 경과하면 딱 한번만 실행후 끝내달라고 예약
+      bombKey = window.setTimeout(function () {
+        $bomb.setAttribute('src', 'https://bit.ly/3gRmoJX');
+      }, 3000);
+
+      $btnBomb.addEventListener('click', function () {
+        clearTimeout(bombKey);
+        alert('폭탄을 해체했습니다.');
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>자바스크립트 내장 API - .setTimeout(), .setInterval()</h1>
+
+    <h2 class="timeout">1) setTimeout() 테스트</h2>
+    <p class="frame">
+      <img src="https://bit.ly/36n8RaZ" alt="#" class="bomb">
+      <!-- https://bit.ly/3gRmoJX -->
+    </p>
+    <button class="btnBomb">폭탄해체</button>
+
+    <hr />
+
+    <h2 class="interval">2) setInterval() 테스트</h2>
+
+    <p style="text-align:center;">
+      도전! 3초마다 100만원 벌기 <br />
+      현재까지 벌은 돈 : <span class="print">?</span> 원
+    </p>
+    <p class="frame">
+      <img src="https://bit.ly/3gSK6W3" alt="#">
+      <button class="stop">그만벌기</button>
+    </p>
+  </div>
+
+  <script>
+    let moneyKey = null;
+    let totMoney = 0;
+    const $print = document.querySelector('.print');
+
+    //돈버는 함수
+    const makeMoneyFn = function () {
+      intervalKey = window.setInterval(function () {
+        totMoney += 1000000;
+
+        //1000단위로 숫자에 콤마표시
+        $print.innerHTML = totMoney.toLocaleString();
+      }, 3000);
+    };
+
+    makeMoneyFn();
+
+
+    const $btnStop = document.querySelector('.stop');
+    $btnStop.addEventListener('click', function () {
+
+      const result = confirm('이제 그만 벌어도 될까요?.');//true, false
+
+      if (result) {
+        clearInterval(intervalKey);
+      } else {
+        alert('계속해서 돈이 적립됩니다.');
+      }
+    });
+  </script>
+</body>
+
+</html>

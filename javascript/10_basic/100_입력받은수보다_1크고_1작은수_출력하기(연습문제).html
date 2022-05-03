@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>100_입력받은수보다_1크고_1작은수_출력하기</title>
+  <style>
+    #wrap {
+      font-size: 25px;
+    }
+
+    button {
+      padding: 20px 25px;
+    }
+  </style>
+  <script>
+    /*
+      1. 사용자가 시작 버튼을 누른다.
+         -> 시작버튼에 대한 클릭이벤트 구문 작성
+      2. 숫자를 입력할 창이 뜬다.
+      3. 입력받은 숫자에 +1, -1 한 결과를 출력한다.
+    **/
+
+    //DOMContentLoaded 이벤트는 DOM-Tree 구성이 완료된 시점에 발생
+    window.addEventListener('DOMContentLoaded', function () {
+
+      const $btn = document.querySelector('button');
+
+      const $inputNum = document.querySelector('.inputNum');
+      const $greater = document.querySelector('.greater');
+      const $less = document.querySelector('.less');
+
+      //시작버튼에 대한 클릭이벤트 구문
+      $btn.addEventListener('click', function () {
+        const num = Number(prompt('정수를 입력해 주세요'));
+
+        $inputNum.textContent = num;
+        $greater.textContent = num + 1;
+        $less.textContent = num - 1;
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>입력받은 수 : <span class="inputNum">10</span></h1>
+    <ul>
+      <li>1큰수 : <span class="greater">11</span></li>
+      <li>1작은수 : <span class="less">9</span></li>
+    </ul>
+    <button>시작</button>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>900-동영상을 전체배경으로</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    h1 {
+      color: white;
+    }
+
+    .video-container {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    .video-container>video {
+      width: 100%;
+      min-width: 1600px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">배경동영상을 활용한 웹페이지</h1>
+
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="./media/Mobis_main_kv_01.mp4" type="video/mp4" />
+        <!-- <source src="./media/dokdo-bg.mp4" type="video/mp4" /> -->
+      </video>
+    </div>
+  </div>
+</body>
+
+</html>

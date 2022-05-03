@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60_달에서의_몸무게_구하기(연습문제)</title>
+</head>
+<body>
+    <h1>달에서의 몸무게 구하기</h1>
+    <p>
+        달에서의 몸무게는? <button>출력하기</button>
+        <br />
+        결과 : <span>?</span> Kg
+    </p>
+
+    <!-- 
+        사용자로부터 몸무게를 입력받습니다.
+
+		달의 중력은 지구의 17%입니다.
+		지구에서 몸무게가 100kg인 사람은 달에 가면 17kg 입니다.
+		당신의 몸무게는 달에서 얼마입니까?
+
+        button을 클릭하면 콘솔창에 답이 나오게 하세요.
+
+        조건 : 40번 예제의 두번째 .addEventListener() 구문 형식으로 코드를 작성해 주세요
+     -->
+
+     <script>
+         const $btn = document.querySelector('button');
+         const $span = document.querySelector('span');
+         
+         $btn.addEventListener('click', function(){
+             const userWeight = Number(prompt('몸무게를 입력하세요',100));
+             const moonWeight = userWeight*0.17;
+
+             console.log('당신의 몸무게는 달에서 '+moonWeight+'Kg 입니다.'); 
+             
+             //span의 textContent로 출력
+             $span.textContent = moonWeight;
+         });
+
+         //h1의 textConent를 가져와서 콘솔창에 출력         
+         console.log(document.querySelector('h1').textContent);
+
+     </script>
+</body>
+</html>

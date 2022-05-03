@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>60-동적으로 클래스를 추가 삭제하는 .addClass() .removeClass .toggleClass()</title>
+  <style>
+    .green {
+      background-color: #0f0;
+    }
+
+    .yellow {
+      background-color: #ff0;
+    }
+
+    .pink {
+      background-color: #f0f;
+    }
+
+    .test {
+      text-decoration: underline;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      //$('h1').addClass('test')
+      //$('h1').removeClass('test');
+
+      //첫번째 버튼을 click하면 첫번째 li에 .yellow 클래스를 추가하시오.
+      $('button').eq(0).on('click', function () {
+        $('li').eq(0).addClass('yellow');
+      });
+
+      //두번째 버튼을 click하면 두번째 li의 .green 클래스를 제거하시오.
+      $('button').eq(1).on('click', function () {
+        $('li').eq(1).removeClass('green');
+      });
+
+      //마지막 버튼을 click하면 세번째 li에 .pink가 없으면 추가, 있으면 삭제하시오
+      $('button').eq(2).on('click', function () {
+        $('li').eq(2).toggleClass('pink');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="test">동적으로 클래스를 추가 삭제하는 API 3종세트</h1>
+
+    <ul>
+      <li>.yellow 클래스 추가</li>
+      <li class="green">.green 클래스 삭제</li>
+      <li>.pink 클래스 추가/삭제</li>
+    </ul>
+
+    <p>
+      <button>addClass</button>
+      <button>removeClass</button>
+      <button>toggleClass</button>
+    </p>
+  </div>
+</body>
+
+</html>

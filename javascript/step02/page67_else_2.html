@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>if 조건문</title>
+  <script>
+    /*
+      confirm() API를 이용하여 아래와 같이 출력후
+      '현재시간은 10:52분입니다. 일어나시겠습니까?'
+
+      선택한 값에 따라 
+        '오늘도 즐거운 하루 보내세요~!'  또는
+        '좋은 꿈 꾸세요~!'
+      출력하는 코드를 작성하세요.
+    */
+
+    const today = new Date();
+
+    const hours = today.getHours();//시간 추출
+    const minutes = today.getMinutes();//분 추출
+
+    const result = confirm('현재시간은 ' + hours + ':' + minutes + '분입니다. 일어나시겠습니까?');
+
+    if (result) {
+
+      if (hours < 9) {
+        document.write('일찍 일어나셨네요. <br />');
+      } else {
+        document.write('늦게 일어나면 수업에 지각할 수 있으니 서두르세요. <br />');
+      }
+
+      document.write('오늘도 즐거운 하루 보내세요~!');
+    } else {
+      document.write('좋은 꿈 꾸세요~!');
+    }
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

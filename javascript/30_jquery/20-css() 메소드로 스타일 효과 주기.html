@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>20-css() 메소드로 스타일 효과 주기</title>
+  <style>
+    ul,
+    li,
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    ul>li {
+      height: 50px;
+      margin-bottom: 5px;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+      list-style: none;
+      border: 1px solid #000;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>반려동물을 찾아 스타일 입히기</h1>
+
+    <ul>
+      <li>여우</li>
+      <li class="cat">고양이</li>
+      <li>금붕어</li>
+      <li class="dog">강아지</li>
+      <li>달팽이</li>
+    </ul>
+  </div>
+
+  <script>
+    //고양이를 클릭하면 노랑배경색의 파란글자인데 굵기가 800으로 변환
+    $('.cat').on('click', function () {
+      //this - Current HTML Element (이번에 OO한 바로 그 녀석)
+      $(this).css({
+        color: 'blue',
+        fontWeight: '800',
+        backgroundColor: 'yellow'
+      });
+    })
+
+    //문제) 강아지를 클릭하면 빨간글자, 이탤릭, 파란배경색
+    $('.dog').on('click', function () {
+      $(this).css({
+        color: 'red',
+        fontStyle: 'italic',
+        backgroundColor: 'blue'
+      });
+    });
+  </script>
+</body>
+
+</html>

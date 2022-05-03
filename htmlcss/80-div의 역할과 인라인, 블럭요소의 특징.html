@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>80-div의 역할과 인라인, 블럭요소의 특징</title>
+  <style>
+    h1 {
+      /* 주지 않아도 생략되어 있는 속성 */
+      display: block;
+      width: 850px;
+      height: 150px;
+      background-color: pink;
+      border: 1px solid blue;
+    }
+
+    div {
+      display: block;
+      width: 700px;
+      background-color: yellow;
+    }
+
+    span {
+      /* 직접 명시하지 않아도 생략되어 있는 속성 */
+      display: inline;
+
+      /* 인라인요소는 width, height를 설정해도 적용되지 않는다. */
+      width: 300px;
+      height: 50px;
+
+      background-color: orange;
+      border: 1px solid blue;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>2021년은 광복76주년</h1>
+
+  <div>
+    <p>독도에 대한</p>
+    <p>관심이</p>
+    <p>사라지면 어떻게 될까요?</p>
+  </div>
+
+  <p>주권도</p>
+  <p>사라집니다.</p>
+
+  <hr />
+
+  <span>대한민국 독도에</span>
+  <span>많은 관심을</span>
+  <span>기울입시다~!</span>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>870-hover, active를 이용한 트랜지션</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    #wrap {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      /* 
+        트랜지션 설정은 반드시 초기상태에 한다.
+        transition: 변화를 감지할 속성명 duration(초) 가속도 지연시간;
+      */
+      transition: all 3s ease-in-out 2s;
+      transition: all 3s;
+    }
+
+    .box:hover {
+      width: 400px;
+      height: 400px;
+      background-color: blue;
+    }
+
+    .box:active {
+      width: 300px;
+      height: 300px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">트랜지션 효과</h1>
+
+    <p class="box">transition</p>
+  </div>
+</body>
+
+</html>

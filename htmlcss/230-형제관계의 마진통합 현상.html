@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>230-형제관계의 마진통합 현상</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /* h1이후에 나오는 모든 p에 크기를 150*150의 검정색 테두리를 가진 박스로 하고 가세정렬후 박스를 부모의 가운데 위치시키시오 */
+        h1~p{
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            line-height: 150px;
+            text-align: center;
+            border: 5px solid black;
+        }
+
+        .box2{
+            margin-bottom:60px;
+        }
+
+        .box3{
+            margin-top:50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 class="text-center">형제관계의 마진통합 현상</h1>
+
+        <p style="background-color:red;" class="box1">박스1</p>
+        <p style="background-color:orange;" class="box2">박스2</p>
+        <p style="background-color:yellow;" class="box3">박스3</p>
+        <p style="background-color:green;" class="box4">박스4</p>
+        <p style="background-color:blue;" class="box5">박스5</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>70-부모와 형제요소를 선택하는 .parent() .siblings()</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      //버튼을 누르면 버튼의 부모요소에 노란색 배경을 적용하시오.
+      $('button').on('click', function () {
+        $(this).parent().css({ 'background-color': 'yellow' });
+      });
+
+      //.pain을 click하면 형제요소의 글자크기를 25px
+      $('.pain').on('click', function () {
+        $(this).siblings().css({
+          fontSize: 25
+        })
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>직계부모, 친형제요소 선택</h1>
+
+    <h2>.parent()로 직계부모 선택</h2>
+    <p>
+      <button>확인</button>
+    </p>
+
+    <h2>.siblings()로 좌우형제 선택</h2>
+    <ul>
+      <li>코로나를 이겨냅시다~!</li>
+      <li>힘들어도 꿋꿋하게~!</li>
+      <li class="pain">아프면 안돼~!</li>
+      <li>종합비타민을 잘 챙겨먹자~!</li>
+      <li>열심히 공부하자</li>
+    </ul>
+  </div>
+</body>
+
+</html>

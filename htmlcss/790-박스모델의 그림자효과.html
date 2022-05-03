@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>790-박스모델의 그림자효과</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    #wrap {
+      padding-bottom: 100px;
+    }
+
+    h1 {
+      width: 500px;
+      margin: 0 auto;
+
+      /* 글자에 그림자 */
+      /* text-shadow: x y blur color; */
+      text-shadow: 10px 10px 5px #f00;
+
+      /* box-model에 그림자 */
+      /* box-shadow: x, y blur color; */
+      box-shadow: 10px 10px 10px rgba(0, 0, 255, 1);
+    }
+
+    p {
+      width: 200px;
+      height: 100px;
+      margin: 150px auto;
+
+      color: white;
+      font-weight: 800;
+
+      font-size: 28px;
+      line-height: 100px;
+      text-align: center;
+
+      background-color: #ccc;
+    }
+
+    p.shadow-1 {
+      background-image: url(./images/닭바위.png);
+      /* 
+        텍스트에 그림자 : 2 2 2 #000
+        box-model에 그림자 : 10 10 5 #f00
+      */
+      text-shadow: 2px 2px 2px #000;
+      box-shadow: 10px 10px 5px #f00;
+
+    }
+
+    p.shadow-2 {
+      background-image: url(./images/영토표지석.png);
+
+      /* box-model에 그림자 */
+      /* box-shadow: x, y blur spread(크기) color; */
+      box-shadow: 0 0 0 20px pink;
+
+      text-shadow: 6px 2px 2px #000;
+    }
+
+    p.shadow-3 {
+      background-image: url(./images/탕건봉.png);
+
+      /* 다중 텍스트 그림자 */
+      text-shadow:
+        1px 1px 2px red,
+        0 0 16px blue,
+        0 0 5px green;
+
+      /* 다중 박스모델 그림자 */
+      box-shadow:
+        3px 3px 0 red,
+        -16px 0 50px olive,
+        10px -10px 25px purple;
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">독도 볼거리</h1>
+
+    <section>
+      <p class="shadow-1">닭바위</p>
+      <p class="shadow-2">영토표지석</p>
+      <p class="shadow-3">탕건봉</p>
+    </section>
+  </div>
+</body>
+
+</html>

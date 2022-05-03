@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>팝업창 제어</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>팝업창 띄우기</h1>
+
+    <p>
+      <button>팝업창 열기</button>
+      <button>팝업창 닫기</button>
+    </p>
+  </div>
+
+  <script>
+    //배열형식으로 DOM을 선택함 => 유사배열
+    const $btn = document.querySelectorAll('button');
+
+    const $btnOpen = $btn[0];//첫번째 버튼
+    const $btnClose = $btn[1];//두번째 버튼
+
+    console.log($btn);
+    console.log($btnOpen);
+    console.log($btnClose);
+
+    let popWin = null;
+
+    //첫번째 버튼에 대한 클릭이벤트 구문
+    $btnOpen.addEventListener('click', function () {
+      //popWin = open(파일명, 창이름, 옵션);
+      popWin = open('p41_typeof.html', 'pop1', 'width=500, height=500');
+    });
+
+
+    //두번째 버튼에 대한 클릭이벤트 구문
+    $btnClose.addEventListener('click', function () {
+      popWin.close();
+    });
+
+  </script>
+</body>
+
+</html>

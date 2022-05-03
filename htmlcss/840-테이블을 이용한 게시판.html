@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>840-테이블을 이용한 게시판</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style type="text/css">
+    h1 {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+
+    table {
+      width: 950px;
+      margin: 30px auto;
+      font-size: 14px;
+      border-collapse: collapse;
+    }
+
+    caption {
+      display: none;
+    }
+
+    .frame {
+      display: block;
+      width: 37px;
+      margin-top: 5px;
+    }
+
+    .frame>img {
+      display: block;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid #dedede;
+      vertical-align: middle;
+    }
+
+    th {
+      height: 50px;
+      border-top: 2px solid #666;
+      border-bottom-color: #666
+    }
+
+    td {
+      height: 80px;
+      text-align: center;
+    }
+
+    td>a.on {
+      font-weight: 600;
+    }
+
+    td>a.on:after {
+      color: royalblue;
+      content: ' [진행중]';
+    }
+
+    td>a.off:after {
+      color: tomato;
+      content: ' [종료]';
+    }
+
+    td>a:hover {
+      text-decoration: underline;
+    }
+
+    td:nth-child(1) {
+      width: 50px;
+    }
+
+    td:nth-child(2) {
+      width: 50px;
+    }
+
+    td:nth-child(3) {
+      width: 50px;
+    }
+
+    td:nth-child(4) {
+      width: 350px;
+    }
+
+    td:nth-child(5) {
+      width: 150px;
+    }
+
+    td:nth-child(6) {
+      width: 200px;
+    }
+
+    td:nth-child(7) {
+      width: 100px;
+    }
+
+    .tit {
+      margin-left: 5px;
+    }
+
+    address {
+      line-height: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1 class="text-center">▣ 독도전시회 일정안내표</h1>
+    <table>
+      <caption>독도 전시 일정</caption>
+
+      <thead>
+        <tr>
+          <th scope="col">번호</th>
+          <th scope="col" colspan="2"><span class="tit">구분</span></th>
+          <th scope="col">제목</th>
+          <th scope="col">장소</th>
+          <th scope="col">진행기간</th>
+          <th scope="col">접수방법</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>전시</td>
+          <td><a href="#" class="frame"><img src="images/dokdo-thumb01.png" alt="#" /></a></td>
+          <td><a href="#">아침을 여는 섬 독도</a></td>
+          <td>독도월드</td>
+          <td>2021-12-11 ~ 2021-12-30</td>
+          <td>온라인</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>영상</td>
+          <td><a href="#" class="frame"><img src="images/dokdo-thumb02.png" alt="#" /></a></td>
+          <td><a href="#">서울 강서구에서 독도를 만나다.</a></td>
+          <td>독도월드</td>
+          <td>2021-11-12 ~ 2021-11-17</td>
+          <td>현장접수</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>관람</td>
+          <td><a href="#" class="frame"><img src="images/dokdo-thumb03.png" alt="#" /></a></td>
+          <td><a href="#" class="on">어화꽃 피는 독도, 울릉도</a></td>
+          <td>독도월드</td>
+          <td>2021-10-01 ~ 2021-10-30</td>
+          <td>전화예약</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>포토</td>
+          <td><a href="#" class="frame"><img src="images/dokdo-thumb04.png" alt="#" /></a></td>
+          <td><a href="#" class="off">한국인의 삶의 기록 독도</a></td>
+          <td>독도월드</td>
+          <td>2021-09-02 ~ 2021-09-30</td>
+          <td>초청장</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>기록</td>
+          <td><a href="#" class="frame"><img src="images/dokdo-thumb05.png" alt="#" /></a></td>
+          <td><a href="#" class="off">일본 죽도의 날 10년 허구와 왜곡</a></td>
+          <td>독도월드</td>
+          <td>2021-08-15 ~ 2021-08-30</td>
+          <td>해당없음</td>
+        </tr>
+      </tbody>
+
+      <tfoot></tfoot>
+    </table>
+
+
+    <address>&copy; Korea Dokdo</address>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>50-선택한 요소의 인덱스를 추출하는 index()</title>
+  <style>
+    ul,
+    li,
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap {
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    ul>li {
+      height: 50px;
+      margin-bottom: 5px;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+      list-style: none;
+      border: 1px solid #000;
+    }
+
+    ul>li:nth-child(1) {
+      background-color: yellow;
+    }
+
+    ul>li:nth-child(2) {
+      background-color: pink;
+    }
+
+    ul>li:nth-child(3) {
+      background-color: skyblue;
+    }
+
+    ul>li:nth-child(4) {
+      background-color: beige;
+    }
+
+    ul>li:nth-child(5) {
+      background-color: khaki;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      const $li = $('ul>li');
+
+      $li.on('click', function () {
+
+        //인덱스를 추출하는 index() API 사용법
+        //전체.index(this)
+
+        //여러개의 li중에서 이번에 클릭한 바로 그 li의 인덱스번호 추출
+        const nowIdx = $li.index(this);
+
+        $('.idx').text(nowIdx);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>선택한 li의 index는? <span class="idx">?</span></h1>
+
+    <ul>
+      <li>여우</li>
+      <li>고양이</li>
+      <li>금붕어</li>
+      <li>강아지</li>
+      <li>달팽이</li>
+    </ul>
+  </div>
+</body>
+
+</html>

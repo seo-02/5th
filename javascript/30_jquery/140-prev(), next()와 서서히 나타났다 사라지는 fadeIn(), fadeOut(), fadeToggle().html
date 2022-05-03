@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>140-prev(), next()와 서서히 나타났다 사라지는 fadeIn(), fadeOut(), fadeToggle()</title>
+  <style>
+    #wrap {
+      width: 750px;
+      margin: 0 auto;
+    }
+
+    section {
+      position: relative;
+    }
+
+    section>p {
+      font-size: 26px;
+      background-color: #ff0;
+    }
+
+    section>.box {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 50px;
+      padding: 50px;
+      background-color: #f00;
+    }
+
+    section>.box>span {
+      display: none;
+      color: #00f;
+      font-size: 36px;
+    }
+
+    section>.btn {
+      margin-top: 200px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    $(function () {
+
+      $btnToggle = $('button').eq(1);
+      $box = $('.box');
+
+      //첫번째 버튼에 대한 클릭이벤트 구문 - prev() 사용
+      $btnToggle.prev().on('click', function () {
+
+        //3초에 걸쳐서 요소의 불투명도가 1로 수렴
+        $box.fadeIn(3000, function () {
+          $box.children('span').fadeIn();
+        });
+      });
+
+
+      //마지막 버튼에 대한 클릭이벤트 구문 - next() 사용
+      $btnToggle.next().on('click', function () {
+
+        //1초에 걸쳐서 요소의 불투명도가 0로 수렴
+        $box.children('span').fadeOut(1000, function () {
+
+          //3초에 걸쳐서 요소의 불투명도가 0로 수렴
+          $box.fadeOut(3000);
+        });
+
+      });
+
+
+      $btnToggle.on('click', function () {
+        $box.fadeToggle(2000);
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>.fadeIn() .fadeOut() .fadeToggle()</h1>
+
+    <section>
+      <p>
+        opacity 수치를 조절하는 방식이다.
+      </p>
+      <div class="box"><span>SUCCESS~!</span></div>
+      <div class="btn">
+        <button>fadeIn</button>
+        <button>fadeToggle</button>
+        <button>fadeOut</button>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+#wrap {
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	/* border: 1px solid #000; */
+}
+
+header {
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	width: 100%;
+	border: 1px solid green;
+}
+
+header > h1 {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 12.5%;
+	height: 142px;
+	font-size: 20px;
+	line-height: 142px;
+	background-color: magenta;
+}
+
+header > nav {
+	width: 87.5%;
+	height: 80px;
+	line-height: 80px;
+	background-color: red;
+}
+
+.sns {
+	width: 50%;
+	height: 250px;
+	background-color: royalblue;
+}
+
+section {
+	line-height: 250px;
+}
+
+.gallery {
+	width: 27%;
+	background-color: gold;
+}
+
+.info {
+	width: 23%;
+	background-color: greenyellow;
+}
+
+footer {
+	width: 100%;
+}
+
+footer > address {
+	height: 94px;
+	line-height: 94px;
+	background-color: gray;
+}

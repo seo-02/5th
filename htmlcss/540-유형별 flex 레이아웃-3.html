@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>540-유형별 flex 레이아웃-3</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    #wrap{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      justify-content: space-between;
+
+      width: 900px;
+      margin: 30px auto;
+      border: 1px solid #000;
+    }
+
+    section{width: 66%;}
+
+    section>article{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    section>article>h2{
+      width: 48.5%;
+      height: 300px;
+      background-color: skyblue;
+    }
+
+    section>article>h2+div{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      justify-content: space-between;
+
+      /* 여러줄일때의 교차축 정렬 */
+      align-content:space-between;
+
+      width: 48.5%;
+      height: 300px;
+    }
+
+    section>article>h2+div>p{
+      width: 47%;
+      height: 47%;
+      background-color: greenyellow;
+    }
+
+    section>.double>h2{
+      height: 300px;
+      margin-top: 8px;
+      background-color: pink;
+    }
+
+    .snb{width: 32%;}
+    .snb>p{
+      height: 100%;
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <section>
+
+      <article>
+        <h2>normal<br />(untagged)</h2>
+        <div>
+          <p>half</p>
+          <p>half</p>
+          <p>half</p>
+          <p>half</p>
+        </div>
+      </article>
+
+      <div class="double">
+        <h2>double</h2>
+      </div>
+
+    </section>
+
+    <div class="snb">
+      <p>tall</p>
+    </div>
+  </div>
+</body>
+</html>

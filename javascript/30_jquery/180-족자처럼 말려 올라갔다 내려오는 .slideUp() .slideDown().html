@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>180-족자처럼 말려 올라갔다 내려오는 .slideUp() .slideDown().html</title>
+    <style>
+        #wrap{
+            width:600px;
+            margin:0 auto;
+            text-align:center;
+        }
+        
+        h1{height:100px;line-height:100px;}
+        
+        p{
+            height:250px;   
+            border:1px solid red;
+        }
+    
+        button{
+            height:50px;
+            font-size:20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    
+    <script>
+
+      $(function(){
+
+        //첫번째 버튼을 클릭하면 p요소가 족자처럼 위로 말려 올라가는 코드를 작성하세요.
+        $('button').first().on('click', function(){
+          //높이가 0에 수렴후 d:n 처리됨
+          $('p').stop().slideUp(2000);
+        });
+
+
+        //두번째 버튼을 클릭하면 p요소가 족자처럼 아래로 말려 내려오는 코드를 작성하세요.
+        $('button').last().on('click', function(){
+          $('p').stop().slideDown(2000);
+        });
+      });
+
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>.slideUp()  .slideDown() 메소드</h1>
+
+        <p>쉽고 재미있는 제이쿼리 API</p>
+
+        <button>slideUp()</button>
+        <button>slideDown()</button>
+    </div>
+</body>
+</html>

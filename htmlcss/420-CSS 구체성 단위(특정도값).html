@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>420-CSS 구체성 단위(특정도값)</title>
+  <style>
+    /* 
+      CSS 구체성단위(특정도값-우선순위 기준)
+
+      1. 태그는 1점
+      2. 클래스, 가상선택자 10점
+      3. 아이디 100점
+      4. 인라인방식 1000점
+      5. !important - 무조건 최우선(가능한 사용하면 안됨)
+    */
+    h1 {
+      /* 특정도값 : 1점 */
+      color: red;
+    }
+
+    h1 {
+      /* 특정도값 : 1점 */
+      color: blue;
+    }
+
+    #korea {
+      /* 특정도값 : 100점 */
+      color: green;
+    }
+
+    .dokdo {
+      /* 특정도값 : 10점 */
+      color: black;
+      text-decoration: underline;
+    }
+
+    /* 특정도값? 124점  */
+    h1#korea.dokdo~ol>li.invertebrate+li {
+      font-weight: 800;
+    }
+
+    /* 특정도값? 최우선 */
+    ol>li:nth-child(4) {
+      font-weight: 800 !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="wrap">
+    <h1 id="korea" class="dokdo">약 322종의 해양생물이 살고 있는 독도 앞바다</h1>
+    <p>울릉도와 독도는 따뜻한 바닷물과 찬물이 합쳐지는 곳이어서 해양생물이 매우 많습니다.</p>
+
+    <ol>
+      <li>혹돔굴에서 무리 지어 자는 혹돔</li>
+      <li>깨끗한 바다에서 사는 유착나무돌산호</li>
+      <li class="invertebrate">전복, 소라, 홍합, 해삼, 새우, 홍게, 거북손 등의 무척추동물</li>
+      <li style="font-weight: 400;">미역, 다시마, 김, 우뭇가사리, 톳 등의 해조류</li>
+      <li>독도를 수호하던 바다사자 - 독도강치 </li>
+    </ol>
+  </div>
+</body>
+
+</html>

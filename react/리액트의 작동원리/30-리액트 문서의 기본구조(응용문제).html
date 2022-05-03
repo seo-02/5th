@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>30-리액트 문서의 기본구조(응용문제)</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
+
+<body>
+  <div id="root">
+    <!-- 우리의 목표
+    <header>
+      <h1>My First React Element</h1>
+      <p>This is a <strong>Description</strong></p>
+    </header> 
+  -->
+  </div>
+  <script>
+    //React.createElement('태그명',{프로퍼티:값},'내용'}
+    const $h1 = React.createElement('h1', null, 'My First React Element');
+
+    const $strong = React.createElement('strong', null, 'Description');
+    const $p = React.createElement('p', null, 'This is a ', $strong)
+
+    const $header = React.createElement('header', null, $h1, $p);
+
+    ReactDOM.render($header, document.getElementById('root'));
+  </script>
+</body>
+
+</html>

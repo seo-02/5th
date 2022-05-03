@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>930-박스의 최대 최소 크기지정</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    /* 와이드 PC 모니터 */
+    #wrap {
+      width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+      background-color: pink;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      /*기본값*/
+      width: 100%;
+
+      /* 최대폭 */
+      max-width: 800px;
+
+      line-height: 2;
+      background-color: yellow;
+    }
+
+    /* 표준크기의 PC 모니터  */
+    @media screen and (max-width:1200px) {
+      #wrap {
+        width: 960px;
+        background-color: orange;
+      }
+
+      p {
+        background-color: lightblue;
+        min-height: 230px;
+        /*최소높이 지정*/
+      }
+    }
+
+    /* 태블릿 */
+    @media screen and (max-width:992px) {
+      #wrap {
+        width: 800px;
+        height: 600px;
+        color: #fff;
+        background-color: blue;
+      }
+
+      p {
+        max-width: initial;
+        min-width: 900px;
+        min-height: initial;
+        height: 100%;
+        max-height: 300px;
+        margin-left: 50px;
+        color: #000;
+      }
+    }
+
+    /* 모바일 - 최대폭 640px에 대한 미디어쿼리 구문을 작성 */
+    @media screen and (max-width:640px) {
+      #wrap {
+        width: 100%;
+        background-color: green;
+      }
+
+      p {
+        min-width: initial;
+        max-width: 250px;
+        margin-left: 0;
+        background-color: pink;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">박스의 최대 최소 크기지정</h1>
+
+    <h2>CSS 속성명</h2>
+    <p>
+      1. max-width : 최대폭지정 <br />
+      2. min-width : 최소폭지정 <br />
+
+      3. max-height : 최대높이 지정 <br />
+      4. min-height : 최소높이 지정
+    </p>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+.sr-only {
+	position: absolute;
+	left: -9999px;
+}
+
+#wrap {
+	width: 655px;
+	margin: 0 auto;
+}
+
+header > a {
+	display: block;
+	height: 308px;
+	text-indent: -9999px;
+	background-image: url(./../images/visual.jpg);
+	background-size: cover;
+}
+
+/* 네비게이션 */
+header > nav > .gnb {
+	display: flex;
+
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f6f8f9+0,e5ebee+50,d7dee3+51,f5f7f9+100;White+Gloss */
+	background: #f6f8f9; /* Old browsers */
+	background: -moz-linear-gradient(
+		top,
+		#f6f8f9 0%,
+		#e5ebee 50%,
+		#d7dee3 51%,
+		#f5f7f9 100%
+	); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		top,
+		#f6f8f9 0%,
+		#e5ebee 50%,
+		#d7dee3 51%,
+		#f5f7f9 100%
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		#f6f8f9 0%,
+		#e5ebee 50%,
+		#d7dee3 51%,
+		#f5f7f9 100%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(
+			startColorstr='#f6f8f9',
+			endColorstr='#f5f7f9',
+			GradientType=0
+		); /* IE6-9 */
+}
+header > nav > .gnb > li {
+	width: 25%;
+	background-image: url(./../images/bg_mnu.png);
+	background-position: 20px 0;
+	background-repeat: no-repeat;
+}
+header > nav > .gnb > li:hover,
+header > nav > .gnb > li.on {
+	background-position: 20px -45px;
+}
+header > nav > .gnb > li > a {
+	display: block;
+	height: 45px;
+	font-weight: 800;
+	line-height: 45px;
+	text-align: center;
+}
+/* 테이블작업 */
+section > table > thead > tr > th {
+	height: 40px;
+	background-color: #eeffff;
+	border-top: 2px solid #bde;
+	border-left: 1px solid #dedede;
+	border-right: 1px solid #dedede;
+}
+section > table > tbody > tr > th {
+	border: 1px solid #dedede;
+}
+section > table > tbody > tr > td {
+	height: 40px;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #dedede;
+}
+section > table > tbody > tr > td:last-child {
+	text-align: left;
+}
+footer {
+	position: relative;
+	height: 130px;
+	background-image: url(./../images/bg_bottom.jpg);
+	background-position: -350px 0;
+	background-repeat: no-repeat;
+}
+footer > address {
+	position: absolute;
+	left: 130px;
+	bottom: 20px;
+	color: #fff;
+	font-weight: 600;
+}

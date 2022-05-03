@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>510-flex를 이용한 메뉴구현과 box-sizing</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <style>
+        #wrap{
+            width: 520px;
+            margin: 0 auto;
+            /* border: 1px solid #000; */
+        }
+
+        section{}
+        
+        section>ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        section>ul>li{
+            width: 121px;
+            background-position: 0 0;
+        }
+
+        /* section>ul>li:hover{background-position: 0 -81px;} */
+
+        section>ul>li:nth-child(1){background-image: url(./images/mnu_01.png);}
+        section>ul>li:nth-child(2){background-image: url(./images/mnu_02.png);}
+        section>ul>li:nth-child(3){background-image: url(./images/mnu_03.png);}
+        section>ul>li:nth-child(4){background-image: url(./images/mnu_04.png);}
+
+        section>ul>li>a{
+            display: block;
+            height: 80px;
+            text-indent: -9999px;
+        }
+
+        section>p{
+            width: 100%;
+            height: 300px;
+            margin-top: 10px;
+            text-indent: -9999px;
+            background-image: url(./images/독도-전시회.jpg);
+            background-size: cover;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        footer>address{
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="text-center">독도전시관</h1>
+        </header>
+        <section>
+            <ul>
+                <li><a href="#">전시관소개</a></li>
+                <li><a href="#">전시안내</a></li>
+                <li><a href="#">관람예약</a></li>
+                <li><a href="#">열린광장</a></li>
+            </ul>
+            <p>
+                선택에 따른 내용 출력란(컨텐츠)
+            </p>
+        </section>
+        <footer>
+            <address>&copy; Korea Dokdo</address>
+        </footer>
+    </div>
+</body>
+</html>

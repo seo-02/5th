@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>배경이미지가 박스보다 더클때 크기조절</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    #wrap {
+      padding-bottom: 80px;
+    }
+
+    p {
+      width: 800px;
+      height: 250px;
+      margin: 0 auto 80px;
+      line-height: 530px;
+      text-align: center;
+      background-image: url(./images/img_dokdo.jpg);
+      background-repeat: no-repeat;
+      outline: 1px solid red;
+    }
+
+    p.s1 {
+      background-size: 550px 50px
+    }
+
+    p.s2 {
+      /* 만약 배경이미지의 높이에 따라 가로값을 자동으로 지정하고 싶으면 반드시 auto 키워드를 작성해야 한다. */
+      background-size: auto 180px;
+    }
+
+    p.s3 {
+      /* 요소의 높이에 맞춤 */
+      background-size: cover;
+    }
+
+    p.s4 {
+      /* 요소의 가로폭에 맞춤 */
+      background-size: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">대한민국영토 독도</h1>
+
+    <p class="s1">background-size : 550px 50px</p>
+    <p class="s2">background-size : auto 180px</p>
+    <p class="s3">background-size : cover (박스의 세로높이에 딱맞춤)</p>
+    <p class="s4">background-size : contain (박스의 가로폭에 딱맞춤)</p>
+  </div>
+</body>
+
+</html>

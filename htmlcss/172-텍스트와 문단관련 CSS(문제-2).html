@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>텍스트와 문단관련 CSS(문제-2).html</title>
+    <style>
+        /*보더를 3px에 dotted 검정색으로  폰트 컬러는 파란색으로 폰트사이즈는 10px으로 설정 */
+        #txt span {
+            border: 3px dotted black;
+            color: blue;
+            font-size: 10px;
+        }
+
+        /*폰트 굵기는 bold로 폰트 데코레이션은 아래선으로 폰트컬러는 빨간색으로  */
+        #txt .box1 {
+            font-weight: bold;
+            text-decoration: underline;
+            color: red;
+        }
+
+        /*폰트컬러는 스카이블루로 폰트굵기는 bold로 폰트에다가 그림자 검은색으로 설정 */
+        #txt .box2 {
+            color: skyblue;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px black;
+        }
+
+        /*폰트 패밀리에서 굴림으로 폰트스타일은 이탤리로 폰트컬러는 보라색으로 */
+        #txt .box3 {
+            font-family: 굴림;
+            font-style: italic;
+            color: purple;
+        }
+
+
+        /*보더를 솔리드에 4px에 파란색으로하고 들여쓰기를 20px하며 가로값을100x 세로값을100px 백그라운드 컬러를 노란색으로 설정 */
+        #txt .box4 {
+            border: 4px solid blue;
+            text-indent: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        /*텍스트 테코레이션을 위에선으로 하고 보더값을 1px에 솔리드 검은색으로 설정 */
+        #txt .box5 {
+            text-decoration: overline;
+            border: 1px solid black;
+        }
+
+        /*폰트사이즈를 15px 폰트스타일을 이탤릭으로 폰트컬러를 보라색으로 폰트 굵기를 bold 로 설정 */
+        #txt .box6 {
+            font-style: italic;
+            font-size: 15px;
+            color: purple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="txt">
+        <span>난 너의 위성 네 주윌 맴돌지</span>
+
+        <p class="box1">그렇다고 네가 태양은 아니니</p>
+        <p class="box2">제멋대로 굴면 안 돼</p>
+        <p class="box3"> 어떻게 한순간의 떨림이</p>
+        <p class="box4">소리 없이 너의 두 눈을 가리니</p>
+        <p class="box5">너의 뜻대로 흘러가네</p>
+        <p class="box6">내게 상처를 주면 안 돼</p>
+    </div>
+</body>
+
+</html>

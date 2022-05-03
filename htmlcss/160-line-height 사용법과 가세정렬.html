@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>160-line-height 사용법과 가세정렬</title>
+  <style>
+    /* h1의 내용을 가로 가운데 정렬하고, 높이는 100px, pink 배경색이 나타나게 스타일링 */
+    h1 {
+      height: 100px;
+      line-height: 100px;
+      background-color: pink;
+      text-align: center;
+    }
+
+    blockquote {
+      width: 900px;
+      height: 300px;
+
+      line-height: 50px;
+
+      /* 재정의 */
+      /* px단위로 환산하면 16px * 3 = 48px */
+      line-height: 300%;
+
+      line-height: 2;
+
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>독도의 진실</h1>
+
+    <h2>독도는 일본 제국주의의 한반도 침략과정에서 침탈되었다가 되찾은 역사의 땅이다.</h2>
+    <blockquote cite="http://www.koreadokdo.or.kr/" title="독도재단">
+      1808년 만기요람은 울릉도와 우산도(독도)가 모두 우산국의 영토라고 기록 <br />
+      1876년 일본 해군성은 독도를 조선의 소속으로 표기 <br />
+      1877년 일본 국가최고기관인 태정관은 독도가 일본의 영토가 아님을 공식적으로 인정 <br />
+      1905년 편입조치를 처음에는 "무주지 선점"이라고 주장했다가 나중에는 "영유의사의 재확인"으로 말을 바꿈 <br />
+      1948년 8월 15일 대한민국 정부가 수립되자 UN결의에 따라 다른 모든 섬들과 함께 한반도 부속도서로서 한국에 반환 <br />
+      2005년 일본 오끼섬에서 발견된 안용복 관련 조사보고서에도 독도를 조선의 섬으로 표기
+    </blockquote>
+    <p><img src="./images/evidence.jpg" alt="#"></p>
+  </div>
+</body>
+
+</html>

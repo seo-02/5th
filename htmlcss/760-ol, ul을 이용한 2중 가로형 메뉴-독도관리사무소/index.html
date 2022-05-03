@@ -1,0 +1,122 @@
+<!--
+    http://www.ulleung.go.kr/mdokdo/page.htm?mnu_uid=2537& 을 참고하여
+    메뉴 UI를 제작하시오 (:hover 서브메뉴와 함께 삼각형 노출)
+-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>760-ol, ul을 이용한 2중 가로형 메뉴-독도월드</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="tnb">
+                <ul>
+                    <li><a href="#">홈으로</a></li>
+                    <li><a href="#">울릉군청</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+            </div>
+            <h1 class="logo"><a href="#">독도관리사무소</a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">독도관리사무소</a>
+                        <div class="lnb-container">
+                            <ol class="lnb lnb_1">
+                                <li><a href="#">소장인사말</a></li>
+                                <li><a href="#">조직도</a></li>
+                                <li><a href="#">주요업무</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ol>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">독도현황</a>
+                        <div class="lnb-container">
+                            <ol class="lnb lnb_2">
+                                <li><a href="#">독도의 위치</a></li>
+                                <li><a href="#">형성과 지형 및 지질</a></li>
+                                <li><a href="#">기후</a></li>
+                                <li><a href="#">행정구역 주민</a></li>
+                                <li><a href="#">독도의 해양/관광자원</a></li>
+                            </ol>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">독도입도안내
+                        </a>
+                        <div class="lnb-container">
+                            <!--<span class="arr"></span> css에서 :after를 이용해서 처리-->
+                            <ol class="lnb lnb_3">
+                                <li><a href="#">독도입도안내</a></li>
+                            </ol>
+                        </div>
+                    </li>
+
+                    <li><a href="#">독도명예주민증</a></li>
+
+                    <li>
+                        <a href="#">독도의 지명</a>
+                        <div class="lnb-container">
+                            <ol class="lnb lnb_5">
+                                <li><a href="#">독도의 지명</a></li>
+                            </ol>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">독도사진&영상</a>
+                        <div class="lnb-container">
+                            <ol class="lnb lnb_6">
+                                <li><a href="#">독도사진</a></li>
+                                <li><a href="#">독도영상</a></li>
+                            </ol>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">독도평화호</a>
+                        <div class="lnb-container">
+                            <ol class="lnb lnb_7">
+                                <li><a href="#">독도평화호</a></li>
+                            </ol>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <div class="lnb-container">
+                            <ol class="lnb lnb_8">
+                                <li><a href="#">뉴스 및 공지</a></li>
+                                <li><a href="#">독도관련사이트</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="visual">
+            <h2>아름다운 우리땅 독도</h2>
+        </section>
+        <section class="cont">
+            <h2>독도현황</h2>
+        </section>
+        <footer>
+            <address>
+                [40232] 경상북도 울릉군 울릉읍 울릉순환로 785-27 3층 독도관리사무소 전화 : 054-790-6652 팩스 : 054-791-6649 <br />
+                Copyrightⓒ 2016 ULLEUNG GUN. ALL RIGHTS RESERVED.
+            </address>
+        </footer>
+    </div>
+</body>
+
+</html>

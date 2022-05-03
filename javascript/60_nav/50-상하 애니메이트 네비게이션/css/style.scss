@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+#wrap{
+
+    >header{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        border-bottom: 3px solid gold;
+        background-color: pink;
+
+        >.container{
+            position: relative;
+            // border: 1px solid #000;
+            z-index: 100;
+            background-color: pink;
+            
+            >nav{
+                width: 240px;
+                margin: 0 auto;
+                
+                >.gnb{
+
+                    display: flex;
+                    flex-flow: row nowrap;
+                    >li{
+                        width: 80px;
+
+                        &:hover>a,
+                        &.on>a{
+                            color: #fff;
+                            font-weight: 800;
+                        }
+
+                        >a{
+                            display: block;
+                            height: 100px;
+                            line-height: 100px;
+                            text-align: center;
+
+                        }
+                    }
+                }//end of .gnb
+            }//end of nav
+        }//end of .container
+
+        >.bg_lnb{
+            position: absolute;
+            left: 50%;
+            top: -400px;
+            width: 1120px;
+            margin-left: calc(-1120px / 2);
+            background-color: #fff;
+
+            >p{
+                display: flex;
+                height: 232px;
+                text-indent: -9999px;
+                background-image: url(./../images/gnb_icon_set.png);
+                background-position: center 0;
+                border: 3px solid #ccc;
+
+                >a{
+                    display: block;
+                    width: calc(1120px / 2);
+                    height: 232px;
+                    text-indent: -9999px;
+                }
+
+                >a.left:hover{     
+                    cursor: url(./../images/arrow_l.935a967c.cur),auto;               
+                    background-color: rgba(255,255,0,0.3);
+
+                }
+
+                >a.right:hover{
+                    cursor: url(./../images/arrow_r.1db549d7.cur),auto;;
+                    background-color: rgba(0,255,0,0.3);
+                }
+            }
+        }//end of .bg_lnb
+
+    }//end of header
+
+    >section, article{
+        height: 500px;
+        font-size: 100px;
+        line-height: 500px;
+        text-align: center;
+    }
+
+    >section{
+        margin-top: 100px;
+        background-color:rgb(190, 252, 177);
+    }
+    
+    >article{background-color: rgb(183, 133, 199);}
+    
+
+}

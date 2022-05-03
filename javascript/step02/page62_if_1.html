@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>if 조건문</title>
+  <script>
+    /*
+      사용자로부터 숫자를 입력받아 100보다 작으면
+      "100보다 작은 값을 입력하셨군요, 입력된 값은 77 입니다." 처럼
+      출력되는 코드를 작성하시오.
+    */
+    let num = prompt("숫자를 입력해 주세요");
+
+    num = Number(num); //문자숫자를 연산가능한 진짜 숫자로 변환
+
+    if (num < 100) {
+      document.write('100보다 작은 값을 입력하셨군요, 입력된 값은 ' + num + ' 입니다. <br />');
+    }
+
+    document.write('프로그램 종료');
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

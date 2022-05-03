@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+#wrap {
+	width: calc(164px * 4 + 9px);
+	margin: 0 auto;
+}
+
+section > h2 {
+	height: 50px;
+	line-height: 50px;
+}
+
+section > ol {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+section > ol > li {
+	width: 164px;
+}
+
+section > ol > li  .pht {
+	position: relative;
+	height: 114px;
+	background-size: cover;
+}
+
+section > ol > li:nth-child(1)  .pht {
+	background-image: url(./../images/travle01.png);
+}
+section > ol > li:nth-child(2)  .pht {
+	background-image: url(./../images/travle02.png);
+}
+section > ol > li:nth-child(3)  .pht {
+	background-image: url(./../images/travle03.png);
+}
+section > ol > li:nth-child(4)  .pht {
+	background-image: url(./../images/travle04.png);
+}
+
+section > ol > li  .pht > .mov {
+	display: block;
+	position: absolute;
+	left: 5px;
+	bottom: 3px;
+	width: 26px;
+	height: 26px;
+	text-indent: -9999px;
+	background-image: url(./../images/play.png);
+}
+
+section > ol > li  .pht > .frst {
+	display: block;
+	position: absolute;
+	right: 3px;
+	bottom: 3px;
+	width: 45px;
+	height: 25px;
+	color: #fff;
+	line-height: 25px;
+	text-align: center;
+	background-color: skyblue;
+}
+
+section > ol > li .tit {
+	height: 30px;
+	color: #004cbb;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 30px;
+}
+
+section > ol > li .tip {
+	overflow: hidden;
+	font-size: 13px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+footer {
+	margin-top: 50px;
+}
+
+footer > address {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+}

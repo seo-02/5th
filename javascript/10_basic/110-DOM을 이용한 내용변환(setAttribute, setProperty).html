@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>110-DOM을 이용한 내용변환(setAttribute, setProperty)</title>
+  <style>
+    .kkk {
+      background-color: pink;
+    }
+  </style>
+  <script>
+    //DOMContentLoaded 이벤트 구문 작성
+    window.addEventListener('DOMContentLoaded', function () {
+      const $btn = document.querySelectorAll('button');//버튼(배열형식으로 저장)
+      const $cont = document.getElementById('cont');//p#cont
+
+      //첫번째 버튼에 대한 클릭이벤트 구문
+      //태그의 속성을 제어
+      $btn[0].addEventListener('click', function () {
+        $cont.textContent = '자바스크립트를 이용한 이벤트 처리 완료!';
+
+        //속성 추가방법 - $cont.setAttribute(속성명, 속성값);
+        $cont.setAttribute('style', 'color:red;');
+
+        //.innerHTML 속성은 .textContent와 비슷한데, 다만 문자열중 태그가 있으면 태그로 인식됨
+        document.querySelector('.result').innerHTML = $cont.getAttribute('id') + '<br />';
+
+        //태그의 속성을 삭제
+        //$cont.removeAttribute('class');
+
+        //.kkk 클래스명만 제거하는 방법
+        $cont.setAttribute('style', ' ');
+
+        //요소가 특정 애트리뷰트를 가지고 있는 검사 -> true, false        
+        console.log($cont.hasAttribute('id'));//true
+        console.log($cont.hasAttribute('duly'));//false
+      });
+
+
+      //두번째 버튼에 대한 mouseover 이벤트 구문
+      //CSS 속성을 제어
+      $btn[1].addEventListener('mouseover', function () {
+        //$cont.style.setProperty(속성명,속성값);
+        $cont.style.setProperty('width', '300px');
+        $cont.style.setProperty('height', '100px');
+
+        //{color:blue;line-height:100px;text-align:center;background-color:yellow;}
+        $cont.style.setProperty('color', 'blue');
+        $cont.style.setProperty('line-height', '100px');
+        $cont.style.setProperty('text-align', 'center');
+        $cont.style.setProperty('background-color', 'yellow');
+
+        //setProperty() 보다 이걸 더 많이 사용함
+        $cont.style.width = '500px';
+        $cont.style.height = '200px';
+        $cont.style.color = 'yellow';
+        $cont.style.lineHeight = '200px';
+        $cont.style.textAlign = 'center';
+        $cont.style.backgroundColor = 'red';
+
+        //CSS 속성값 가져오기
+        //window.getComputedStyle($cont).getPropertyValue('속성명')
+
+        console.log(window.getComputedStyle($cont).getPropertyValue('width'));
+        console.log(window.getComputedStyle($cont).getPropertyValue('height'));
+
+        console.log(window.getComputedStyle($cont).getPropertyValue('color'));
+        console.log(window.getComputedStyle($cont).getPropertyValue('line-height'));
+        console.log(window.getComputedStyle($cont).getPropertyValue('text-align'));
+        console.log(window.getComputedStyle($cont).getPropertyValue('background-color'));
+
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>DOM을 이용한 내용변환</h1>
+
+  <p id="cont" class="kkk">자바스크립트를 이용한 내용변환</p>
+
+  <button>Attribute Change</button>
+  <button>Property Change</button>
+
+  <hr />
+
+  <p class="result">?</p>
+</body>
+
+</html>

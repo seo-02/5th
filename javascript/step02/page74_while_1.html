@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>반복문</title>
+  <script>
+    // document.write("안녕하세요~! <br />");
+    // document.write("안녕하세요~! <br />");
+    // document.write("안녕하세요~! <br />");
+    // document.write("안녕하세요~! <br />");
+    // document.write("안녕하세요~! <br />");
+    // document.write("안녕하세요~! <br />");
+    // document.write("안녕하세요~! <br />");
+
+    let n = 1;
+
+    while (n < 8) {
+      document.write('안녕하세요~! ' + n + ' <br />');
+      n++;
+    }
+
+    document.write('--------------------<br />');
+
+    const dulyFriends = ['둘리', '또치', '도우너', '희동이'];
+    let i = 0;
+
+    //반복문으로 배열 출력
+    while (i < 4) {
+      document.write(dulyFriends[i] + '<br />');
+      i++;
+    }
+
+    document.write('--------------------<br />');
+
+    //1~30 중 2의 배수이면서 5의 배수인 숫자만 출력
+    let num = 1;
+
+    while (num <= 30) {
+      if (num % 2 === 0 && num % 5 === 0) {
+        document.write(num + "<br />");
+      }
+      num++;
+    }
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

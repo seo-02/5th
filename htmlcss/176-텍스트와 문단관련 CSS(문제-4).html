@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>텍스트와 문단관련 CSS(문제-4).html</title>
+  <style>
+    #wrap{
+      /* 텍스트 가운데 정렬 */
+      text-align: center;
+    }
+    
+    h1{
+        /* 왼쪽으로 -400px만큼 들여쓰기 */
+        /* 핑크배경색 */
+        text-indent: -400px;
+        background-color: pink;
+    }
+
+    p{
+        line-height: 2; /* 줄간격 200%로 설정 */
+        text-indent: 100px; /* 오른쪽으로 100px만큼 들여쓰기 */
+        text-align: left; /* 왼쪽정렬 */
+    }
+
+    .loc{
+        /* 대문자로, 3px의 파랑색 외곽선을 dotted으로 표현 */
+        text-transform: uppercase;
+        border: 3px dotted blue;
+    }
+
+    .temperatures{
+        /* 글자크기를 30px으로 */
+        font-size: 30px;
+    }
+
+    .precipitation{
+        /* 글자색을 빨간색으로 */
+        color: red;
+    }
+
+    .specialties{
+        font-weight: 800; /* 글자를 굵기를 800 */
+    }
+
+    .jumin{
+        /* 글자크기를 부모의 1.5배 */ 
+        font-size:150%;
+        font-size:1.5em;
+    }
+
+    .mrchoi{
+        /* 서체의 순위를 dotum, 굴림체, Open Sans 순서로 설정 */ 
+      font-family: 굴림체, dotum, 'Open Sans';
+    }
+
+    .head{
+        /* 밑줄장식을 넣음 */
+        text-decoration: underline; 
+    }
+
+    .size{
+        font-weight: bold; /* 초록색 bold체 */ 
+    }
+
+    .map{
+        /* 이탤릭체로 */
+        /* 배경색을 aquamarine */
+        font-style: italic;
+        background-color: aquamarine;
+    }
+
+    .chosun{
+        /* 글자간격을 10픽셀로 */ 
+        letter-spacing: 10px;
+    }
+
+    .coercion{
+        /* 단어간의 간격을 30픽셀 */
+        /* 취소선 장식을 넣음 */
+        word-spacing: 30px;
+        text-decoration: line-through;
+    }
+
+    .dokdo{
+        /* 글자크기를 19px, 밑줄장식 */
+        font-size: 19px;
+        text-decoration: underline;
+    }
+
+    .verse-1>.dokdo{color: blue;}/* 글자를 blue */
+    .verse-2>.dokdo{color: forestgreen;}/* 글자를 forestgreen */
+    .verse-3>.dokdo{color: blueviolet}/* 글자를 blueviolet */
+    .verse-4>.dokdo{color: crimson}/* 글자를 crimson */
+    .verse-5>.dokdo{color: fuchsia}/* 글자를 fuchsia */
+</style>
+</head>
+<body>
+  <div id="wrap">
+      <h1 class="title">독도는 우리땅</h1>
+
+      <p class="verse-1">
+        1. 울릉도 동남쪽 뱃길 따라 <span class="loc">87k</span>
+
+        외로운 섬 하나 새들의 고향 
+        
+        그 누가 아무리 자기네 땅이라고 우겨도 
+        
+        <strong class="dokdo">독도는 우리 땅~!</strong> 
+      </p>
+
+
+      <p class="verse-2">
+        <span class="address">2. 경상북도 울릉군 울릉읍 독도리</span>
+        
+        동경 백삼십이 북위 삼십칠 
+        
+        평균기온 <span class="temperatures">13도</span> 강수량은 <span class="precipitation">1800</span> 
+        
+        <strong class="dokdo">독도는 우리 땅~!</strong>
+      </p>
+      
+
+      <p class="verse-3">
+        3. <span class="specialties">오징어 꼴뚜기 대구 홍합 따개비</span>
+        
+        <span class="jumin">주민등록</span> <span class="mrchoi">최종덕</span> <span class="head">이장 김성도</span> ​
+        
+        <span class="size">19만 평방미터 799에 805 ​</span> 
+        
+        <strong class="dokdo">독도는 우리 땅~!</strong>
+      </p>
+      
+
+      <p class="verse-4">
+        4. 지증왕 십삼년 섬나라 우산국 
+        
+        세종실록지리지 <span class="map">강원도 울지현</span>
+        
+        하와이는 미국땅 대마도는 <span class="chosun">조선땅</span>
+        
+        <strong class="dokdo">독도는 우리 땅~!</strong>
+      </p>
+
+
+      <p class="verse-5">
+        5. 러일전쟁 직후에 임자 없는 섬이라고 
+        
+        <span class="coercion">억지로 우기면 정말 곤란해</span> 
+        
+        신라장군 이사부 지하에서 웃는다 
+        
+        <strong class="dokdo">독도는 우리 땅~!</strong>
+      </p>
+      
+  </div>
+</body>
+</html>

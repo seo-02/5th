@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>250-내용과 테두리사이의 공간-패딩</title>
+  <style>
+    .korea {
+      width: 800px;
+      height: 436px;
+      background-image: url(./images/korea.gif);
+      border: 1px solid #000;
+    }
+
+    .korea>.dokdo {
+      width: 40px;
+      height: 57px;
+
+      margin: 110px 0 0 460px;
+      /* 패딩은 박스의 크기를 증가시킨다. */
+      padding-top: 22px;
+      padding-right: 22px;
+      padding-bottom: 22px;
+      padding-left: 22px;
+
+      padding: 22px;
+
+      border: 5px dashed gold;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>독도의 영해</h1>
+    <p>독도의 영해는 섬에서 12해리(약22km)까의 수역이다.</p>
+    <p class="korea">
+      <img class="dokdo" src="./images/dokdo-sea.png" alt="독도">
+    </p>
+
+    <p>
+      padding과 테두리를 포함한 독도img의 크기는?
+    </p>
+  </div>
+
+
+</body>
+
+</html>

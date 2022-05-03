@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>10-순수 자바스크립트로 HTML요소 생성</title>
+</head>
+
+<body>
+
+  <div id="root">
+    <!-- <h1>안녕, 리액트~!</h1> -->
+  </div>
+
+  <!-- 방법1 : 직접 HTML 태그를 작성한다. -->
+  <!-- <h2>안녕, 자바스크립트~!</h2> -->
+
+  <script src="./js/myReactLibrary.js"></script>
+  <script>
+    //방법2 - 바닐라 자바스크립트를 이용해서 생성
+    const $h1 = document.createElement('h1');
+    const $text = document.createTextNode('안녕, 자바스크립트~!');
+
+    //두개의 부품을 결합
+    $h1.appendChild($text);
+
+    //속성추가
+    $h1.setAttribute('name', '로운');
+    $h1.setAttribute('pet', '구름이');
+
+    //body 선택후 $h1 결합
+    document.querySelector('body').appendChild($h1);
+
+
+    //방법3 - 코딩을 간결하게 하기 위해 React 라이브러리 이용
+    const $root = document.querySelector('#root');//목적지
+
+    const $h2 = React.createElement('h2', { 'name': '초롱이', 'color': 'brown' }, '안녕, 리액트~!');//목적물
+
+    ReactDOM.render($h2, $root);
+
+
+  </script>
+</body>
+
+</html>

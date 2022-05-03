@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>140_setInterval()_달리는_캐릭터(수업)</title>
+	<style>
+		#wrap{text-align: center;}
+		h1{height:100px;line-height:100px;}
+		button{width:70px;height:30px;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<h1>달리는 캐릭터</h1>
+		<h2><span class="count">0</span>걸음 뛰고 있어요~!</h2>
+		<p><img src="./../images/run_1.gif" alt="#" /></p>
+		<button>달리기</button>
+		<button>멈추기</button>		
+	</div>
+
+  <script>
+    const $character = document.querySelector('img');
+    const $count = document.querySelector('.count');
+    const $btn = document.querySelectorAll('button');
+    const $btnPlay = $btn[0];
+    const $btnStop = $btn[1];
+
+    let intervalKey = null;
+
+    //방법1에서 사용한 배열
+    const arrSrc = [
+    './../images/run_1.gif',
+    './../images/run_2.gif',
+    './../images/run_3.gif',
+    './../images/run_4.gif',
+    './../images/run_5.gif',
+    './../images/run_6.gif',
+    './../images/run_7.gif',
+    './../images/run_8.gif',
+    './../images/run_9.gif',
+    './../images/run_10.gif'
+    ];
+
+    let sum = 0;
+
+    //play 버튼에 대한 click 이벤트 구문
+    $btnPlay.addEventListener('click', function(){
+
+      //새로운 인터벌이 시작되기 전에 기존 인터벌 제거  
+      clearInterval(intervalKey);
+
+      let idx = 0;
+
+      intervalKey = setInterval(function(){
+
+        sum++;
+        $count.textContent = sum;
+
+        //0~9 사이의 정수 추출
+        if(idx<9){
+          idx++;
+        }else{
+          idx=0;
+        }
+
+
+
+        //1) 배열에서 src 값을 가져오는 방법
+        // <img src="arrSrc[?]" alt="#" />
+        //$character.setAttribute('src',arrSrc[idx]);
+
+
+        //2) 텍스트 문자열을 조작하여 넣는 방법
+        const src = './../images/run_'+(idx+1)+'.gif';
+        $character.setAttribute('src',src);
+      },50);
+    });
+  
+    //stop 버튼에 대한 click 이벤트 구문
+    $btnStop.addEventListener('click', function(){
+      clearInterval(intervalKey);
+    });
+  </script>
+</body>
+</html>

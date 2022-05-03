@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>90-prepend()와 prependTo()는 요소를 첫번째 자식으로 추가</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    $(function () {
+
+      $('button').on('click', function () {
+
+        //$A.prepend(B) - $A의 첫번째 자식으로 B 추가
+        $('ol').prepend('<li>간단한 DOM 셀렉팅 제공</li>');
+
+
+        //B.prependTo($A) - B를 $A의 첫번째 자식으로 추가
+        $('<li>기억하기 쉬운 네이밍</li>').prependTo('ul');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>내부삽입 메소드 .prepend(), .prependTo()</h1>
+
+    <div>
+
+      <h2>제이쿼리의 역할</h2>
+      <ol>
+        <li>동적으로 요소 추가</li>
+      </ol>
+
+      <hr>
+
+      <h2>제이쿼리의 장점</h2>
+      <ul>
+        <li>간단하게 사용할 수 있는 API 제공</li>
+      </ul>
+
+    </div>
+
+    <button type="button">첫번째 자식으로 추가</button>
+  </div>
+</body>
+
+</html>

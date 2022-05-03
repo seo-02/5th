@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>830-시멘틱 테이블</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    body {
+      font-size: 12px;
+      background-image: url(./images/독도선착장.jpg);
+      background-size: cover;
+    }
+
+    h1 {
+      color: #fff;
+    }
+
+    caption {
+      display: none;
+    }
+
+    table {
+      width: 500px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #fff;
+    }
+
+    table th,
+    table td {
+      height: 40px;
+      text-align: center;
+      border: 1px solid black;
+    }
+
+    table th.tit {
+      height: 60px;
+      font-size: 20px;
+    }
+
+    table tr.loc>th,
+    table tr.loc>td {
+      padding: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">대한민국 동쪽, 시작의 땅 독도</h1>
+    <table>
+      <!--표제목-->
+      <caption style="display:block;">독도 입도 안내</caption>
+
+      <colgroup>
+        <!-- width, bgc 속성만 인라인방식으로만 적용 가능 특징 -->
+        <col style="width:24%;background-color: gold;" />
+        <col style="width:38%;" />
+        <col style="width:38%;" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col" colspan="3" class="tit">독도 입도 안내</th>
+        </tr>
+        <tr>
+          <th scope="col">구분</th>
+          <th scope="col">동도</th>
+          <th scope="col">서도</th>
+        </tr>
+      </thead>
+
+      <tfoot>
+        <tr>
+          <th scope="row">문의처</th>
+          <td colspan="2">문의처 울릉군 독도관리사무소 ☎ 054)790-6646 Fax : 054)791-6649</td>
+          <!-- <td></td> -->
+        </tr>
+      </tfoot>
+
+      <tbody>
+        <tr>
+          <th scope="row">관람구역</th>
+          <td>부두내 약30분</td>
+          <td rowspan="2">울릉군에 별도신청</td>
+        </tr>
+        <tr>
+          <th scope="row">신고절차</th>
+          <td>여객선표 구매시 자동신고</td>
+        </tr>
+        <tr>
+          <th scope="row">운항기간</th>
+          <td colspan="2">보통 3월15일 ~ 11월 15일 전후</td>
+          <!-- <td></td> -->
+        </tr>
+        <tr class="loc">
+          <th>위치좌표</th>
+          <td>
+            북위 37도 14분 26.8초 <br />
+            동경 131도 52분 10.4초
+          </td>
+          <td>
+            북위 37도 14분 30.6초 <br />
+            동경 131도 51분 54.6초
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">최고봉</th>
+          <td>98.6m</td>
+          <td>168.5m</td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</body>
+
+</html>

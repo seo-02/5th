@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>90-display 속성변경</title>
+  <style>
+    /* 문제1) h1, h2의 배경을 핑크색으로 하여 아래 결과와 같이 한줄로 나란히 출력되게 하고 싶다. 어떻게 해야 할까? */
+    h1,
+    h2 {
+      display: inline;
+      background-color: pink;
+    }
+
+    /* 문제2) p태그의 직계자식인 span을 500*50px, lightblue 배경색을 가진 박스로 만들고 싶다. 어떻게 해야 할까?*/
+    /* >(꺽쇠, grater than, gt) : 직계자식 선택자 */
+    p>span {
+      display: block;
+      width: 500px;
+      height: 50px;
+
+      /* 문장의 줄간격 */
+      line-height: 50px;
+
+      background-color: lightblue;
+    }
+
+    /* 문제3) p태그의 직계자식인 img의 가로폭을 800px로 만들고 싶다. */
+    p>img {
+      width: 800px;
+
+      /* 종횡비를 유지하면 가로폭에 따라 값이 달라짐 - 기본값 */
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>독도는 <span>대한민국</span> 땅이라는</h1>
+  <h2>명백한 증거들</h2>
+  <div>
+    <p>1. 세종실록지리지(1454년) 표기</p>
+    <p>2. 일본 태정관의 인정(1877년)</p>
+    <p>3. 서양의 조선왕국전도에 표기(1874년)</p>
+    <p>4. 1950년 연합국의 공식발표</p>
+  </div>
+
+  <hr />
+
+  <p>
+    동서양을 막론한
+    <span>독도가 대한민국 영토라는 주장을 뒷받침하는 수많은 증거</span>
+    자료들~!
+  </p>
+
+  <p>
+    <img src="./images/evidence.jpg" alt="독도는 대한민국 땅이라는 명백한 증거들" />
+  </p>
+</body>
+
+</html>

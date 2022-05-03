@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>시멘틱 테이블</title>
+  <style>
+    body {
+      background-image: url(./images/독도선착장.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #wrap {
+      margin: 30px auto;
+      width: 650px;
+    }
+
+    h1.text-center {
+      height: 50px;
+      color: #fff;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    table {
+      border-collapse: collapse;
+      background-color: #fff;
+      text-align: center;
+      border: 1px solid #000;
+    }
+
+    table>tr>th>span.title {
+      font-size: 20px;
+    }
+
+    th {
+      background-color: #FFD602;
+      width: 150px;
+      height: 50px;
+      text-align: center;
+      border: 1px solid #000;
+    }
+
+    th.bgc {
+      background-color: #fff;
+    }
+
+    td {
+      width: 250px;
+      height: 50px;
+      text-align: center;
+      border: 1px solid #000;
+    }
+
+    table>thead>tr>th>span.title {
+      border: 1px solid blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">대한민국 동쪽, 시작의 땅 독도</h1>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col" colspan="3">
+            <span class="title">독도 입도 안내</span>
+          </th>
+          <!-- <td scope="col">독도 입도 안내</td>
+        <td scope="col">독도 입도 안내</td> -->
+        </tr>
+
+      </thead>
+      <tr class="bold">
+        <th scope="row">구분</th>
+        <th class="bgc" scope="col">동도</th>
+        <th class="bgc" scope="col">서도</th>
+      </tr>
+      <tr>
+        <th scope="row">관람구역</th>
+        <td>부두내 약 30분</td>
+        <td rowspan="2">울릉군에 별도 신청</td>
+      </tr>
+      <tr>
+        <th scope="row">신고절차</th>
+        <td>여객선표 구매시 자동신고</td>
+        <!-- <td>울릉군에 별도 신청</td> -->
+      </tr>
+      <tr>
+        <th scope="row">운항기간</th>
+        <td colspan="2">보통 3월 15일 ~ 11월 15일 전후</td>
+        <!-- <td>보통 3월 15일 ~ 11월 15일 전후</td> -->
+      </tr>
+      <tr>
+        <th scope="row">위치좌표</th>
+        <td>
+          북위 37도 14분 26.8초 <br />
+          동경 131도 52분 10.4초
+        </td>
+        <td>
+          북위 37도 14분 30.6초 <br />
+          동경 131도 51분 54.6초
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">최고봉</th>
+        <td>98.6m</td>
+        <td>168.5m</td>
+      </tr>
+      <tr>
+        <th scope="row">문의처</th>
+        <td colspan="2">울릉군 독도관리사무소 ☎ 054)790-6646 Fax: 054)791-6649</td>
+        <!-- <td>울릉군 독도관리사무소 ☎ 054)790-6646 Fax: 054)791-6649</td> -->
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

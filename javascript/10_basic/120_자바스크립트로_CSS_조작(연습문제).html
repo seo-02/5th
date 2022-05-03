@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>120_자바스크립트로_CSS_조작</title>
+
+  <!-- head 태그안에서 자바스크립트를 작성하시오 -->
+
+  <script>
+    //문제1 (첫번째 버튼을 눌렀을 때....)
+    // 1) #hello의 참조값을 변수 $hello에 저장
+
+    // 2) 객체변수 $hello를 style 속성을 이용해서
+    // 글자색을 파란색으로 바꿔보세요.
+    // 글자크기를 10px로 바꿔보세요.
+    // 굵기를 보통(400)으로 바꿔보세요.
+
+
+    //문제2 (두번째 버튼을 눌렀을 때....)
+    // 1) .show의 참조값을 변수 $show에 저장
+
+    // 2)객체변수 show의 스타일을 .setAttribute()를 이용해서 아래와 같이 변경
+    // color:red;font-size:30px;font-weight:800    
+
+    //모범답안
+    window.addEventListener('DOMContentLoaded', function () {
+      const $btn = document.querySelectorAll('button');
+
+      $btn[0].addEventListener('click', function () {
+        const $hello = document.querySelector('#hello');
+
+        $hello.style.color = 'blue';
+        $hello.style.fontSize = '10px';
+        $hello.style.fontWeight = '400';
+      });
+
+      $btn[1].addEventListener('click', function () {
+        const $show = document.querySelector('.show');
+
+        //틀린사례-1
+        // $show.setAttribute('color', 'red');
+        // $show.setAttribute('font-size', '30px');
+        // $show.setAttribute('font-weight', '800');
+
+        //틀린사례-2
+        // $show.setAttribute('style', 'color:red;');
+        // $show.setAttribute('style', 'font-size:30px');
+        // $show.setAttribute('style', 'font-weight:800 ');
+
+        $show.setAttribute('style', 'color : red;font-size : 30px;font-weight : 800');
+      });
+    })
+
+
+  </script>
+
+</head>
+
+<body>
+  <h1 id="hello">여러분, 좋은 아침 입니다.^^</h1>
+  <button>h1 조작</button>
+
+  <hr />
+
+  <p class="show">즐거운 자바스크립트 시간입니다.^^</p>
+  <button>p태그 조작</button>
+</body>
+
+</html>

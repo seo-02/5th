@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>120-.show(), .hide() - 보임,숨김 처리</title>
+  <style>
+    p {
+      width: 300px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border: 1px solid #000;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    //약식준비핸들러
+    $(function () {
+
+      const $btn = $('button');
+
+      $btn.first().on('click', function () {
+        //$('p').css({ display: 'block' });
+
+        //일단 width와 opacity가 본래 수치로 회복되는 개념
+        //인라인방식으로 적용됨
+        $('p').show(2000);
+      });
+
+
+      $btn.eq(1).on('click', function () {
+        //$('p').css({ 'display': 'none' });
+
+        //핵심 : width와 opacity가 0에 수렴하는 개념
+        //인라인방식으로 적용됨
+        $('p').hide(2000);
+
+      });
+
+
+      $btn.last().on('click', function () {
+        //toggle() = show() + hide()
+        $('p').toggle(2000);
+      });
+
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>.show() .hide()</h1>
+
+    <p>쉽고 재미있는 제이쿼리 API 사용법</p>
+
+    <div>
+      <button class="show">show</button>
+      <button class="hide">hide</button>
+      <button class="toggle">toggle</button>
+    </div>
+  </div>
+</body>
+
+</html>

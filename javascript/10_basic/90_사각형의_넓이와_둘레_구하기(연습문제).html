@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>90_사각형의_넓이와_둘레_구하기(연습문제)</title>
+  <script>
+    //문자숫자를 연산가능한 숫자로 변환해 주는 내장함수 Number()
+    //prompt() 함수는 입력받은 값을 무조건 문자열 처리하는 특징이 있다.
+    const width = Number(prompt('width 값을 입력하세요.'));
+    const height = Number(prompt('height 값을 입력하세요.'));
+
+    const area = width * height;//사각형의 넓이
+
+    const circumference = 2 * (width + height);
+
+    document.write('사각형의 넓이는 ' + area + '<br />');
+    document.write('사각형의 둘레는 ' + circumference);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

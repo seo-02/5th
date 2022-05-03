@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>530-유형별 flex 레이아웃-2</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <style>
+    #wrap{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      /* border: 1px solid #000; */
+
+      width: 800px;
+      margin: 80px auto;
+    }
+
+    header, section, footer{width: 254px;}
+    
+    header{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    article{
+      /* flex를 이용한 가세정렬 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 254px;
+    }  
+
+    header>article:nth-of-type(1){height: 250px;}
+    header>article:nth-of-type(2){height: 200px;}
+    header>article:nth-of-type(3){height: 350px;order:-100;}
+
+    section>article:nth-child(1){height: 660px;margin-bottom: 20px;}
+    section>article:nth-child(2){height: 160px;}
+
+    footer{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      justify-content: space-between;
+    }
+
+    footer>article:first-child{height: 150px;}
+    footer>article:nth-child(2){height: 450px;order:-100;}
+    footer>article:last-child{height: 200px;}
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <article style="background-color: #daba57;">1</article>
+      <article style="background-color: #cc7e7a;">2</article>
+      <article style="background-color: #aec344;">3</article>
+    </header>
+
+    <section>
+      <article style="background-color: #b298d7;">1</article>
+      <article style="background-color: #cc7e7a;">2</article>      
+    </section>
+
+    <footer>
+      <article style="background-color: #b9b0b1;">1</article>
+      <article style="background-color: #aec344;">2</article>
+      <article style="background-color: #daba57;">3</article>      
+    </footer>
+  </div>
+</body>
+</html>

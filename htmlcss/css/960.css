@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+#wrap {
+	display: flex;
+	width: 1200px;
+	margin: 0 auto;
+	border: 1px solid #000;
+}
+
+section {
+	color: #fff;
+	font-size: 72px;
+	line-height: 150px;
+	text-align: center;
+}
+
+.box1 {
+	order: 100;
+	width: 25%;
+	background-color: blue;
+}
+
+.container {
+	order: 200;
+	width: 75%;
+}
+
+.container > .box2 {
+	height: 150px;
+	background-color: red;
+}
+
+.container > .box3 {
+	height: 150px;
+	background-color: green;
+}
+
+/* 일반 PC */
+@media screen and (max-width: 1200px) {
+	#wrap {
+		width: 1024px;
+	}
+}
+
+/* 태블릿 */
+@media screen and (max-width: 992px) {
+	#wrap {
+		width: 100%;
+		margin: initial;
+	}
+
+	.box1 {
+		order: 300;
+	}
+}
+
+/* 모바일 */
+@media screen and (max-width: 640px) {
+	#wrap {
+		flex-wrap: wrap;
+	}
+
+	.box1 {
+		order: initial;
+		width: 100%;
+		min-height: 150px;
+	}
+
+	.container {
+		width: 100%;
+	}
+
+	.container > .box3 {
+		display: none;
+	}
+}

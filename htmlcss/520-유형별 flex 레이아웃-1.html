@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>520-유형별 flex 레이아웃-1</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        #wrap{
+            width: 960px;
+            margin: 30px auto;
+        }
+
+        header,
+        .left,
+        .content,
+        .right,
+        footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid #ccc;
+        }
+
+        header{
+            height: 100px;
+            /* line-height: 100px;
+            text-align: center; */
+            background-color: #ff0;
+        }
+
+        section{
+            display: flex;
+            height: 300px;
+        }
+
+        section>.left{
+            width: 240px;
+            background-color: #32ccff;
+        }
+
+        section>.content{
+            width: 480px;
+            background-color: #bff584;
+        }
+
+        section>.right{
+            width: 240px;
+            background-color: #73534c;
+        }
+
+        footer{
+            height: 100px;
+            background-color: #8b8b8b;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>top</header>
+        <section>
+            <article class="left">left</article>
+            <article class="content">content</article>
+            <article class="right">right</article>
+        </section>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

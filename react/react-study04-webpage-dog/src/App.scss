@@ -1,0 +1,102 @@
+#wrap{
+	width: 600px;
+	margin: 30px auto 0;
+	background-color: #333;
+
+  >header{
+    position: relative;
+    height: 100px;
+    background-color: #069;
+
+    >h1.logo{
+      position: absolute;
+      left: 50px;
+      top: 35px;
+
+      >a{
+        color: #fff;
+        font-size: 30px;
+      }
+    }//end of .logo
+
+    >nav{
+      position: absolute;
+      left: 230px;
+      top: 50px;
+
+      >.gnb{
+        display: flex;
+        justify-content: space-between;
+        width: 350px;
+
+        >li{
+          width: 80px;
+
+          &:hover>a,
+          &.on>a{
+            color: #ff0;
+            text-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+          }
+
+          >a{
+            display: block;
+            height: 20px;
+            color: #fff;
+            line-height: 20px;
+            text-align: center;            
+          }
+        }
+      }//end of .gnb
+    }//end of nav
+  }//end of header
+
+  >section{
+    width: 570px;
+    margin: 0 auto;
+    padding: 30px 10px 20px;
+    background-color: #fff;
+
+    >h2{
+      margin-bottom: 25px;
+      font-size: 25px;
+    }
+
+    >p{
+      font-size: 14px;
+      line-height: 1.4;
+      text-align: justify;
+
+      &:after{
+        display: block;
+        clear: both;
+        content: '';
+      }
+
+      >.frame{
+        display: block;
+        overflow: hidden;
+        float: right;
+        width: 300px;
+        margin: 3px 0 0 10px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.35);
+
+        >img{
+          display: block;
+          width: 100%;
+        }
+      }//end of .frame
+    }
+
+
+  }//end of section
+
+  >footer>address{
+    height: 80px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 80px;
+    text-align: center;
+  }//end of footer
+
+}//end of #wrap

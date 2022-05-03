@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>580-float의 영향력을 차단하는 마감재</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <style>
+    /* float 할때 좋은 습관 
+      1) 부모에 반드시 width 값을 계산하여 지정
+      2) ::after를 이용한 clear 처리
+    */
+
+    ul {
+      width: 606px;
+      margin: 0 auto;
+    }
+
+    /* 정석 - 가장 탁월한 방법
+    ul:after {
+      display: block;
+      clear: both;
+      content: '';
+    } */
+
+    ul>li {
+      float: left;
+      width: 200px;
+      border: 1px solid #000;
+    }
+
+    ul>li>a {
+      display: block;
+
+      /* flex를 이용한 가세정렬 */
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+
+      height: 50px;
+      background-color: #ff0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">별도의 마감재를 사용한 float 해제</h1>
+
+    <ul>
+      <li><a href="#">네이버</a></li>
+      <li><a href="#">다음</a></li>
+      <li><a href="#">카카오</a></li>
+    </ul>
+
+    <!-- <p style="clear:both;">
+      하는 원대하고, 청춘에서만 피에 위하여서, 것은 곳이 듣는다. 싹이 이상의 두기 불러 봄바람을 위하여서, 실로 가장 있는 피다. 품에 있는 사는가 풀이 때까지 그들은 넣는 말이다. 이것은 광야에
+    </p> -->
+
+    <p style="clear:both;">
+      품에 있는 사는가 풀이 때까지 그들은 넣는 말이다. 이것은 광야에 싹이 이상의 두기 불러 봄바람을 위하여서, 실로 가장 있는 피다. 하는 원대하고, 청춘에서만 피에 위하여서, 것은 곳이 듣는다.
+    </p>
+  </div>
+</body>
+
+</html>

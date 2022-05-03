@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>110-CSS 선택을 편하게 하는 이름표 - id, class</title>
+  <style>
+    /* 첫 번째로 나오는 div에 {파란테두리, 글자를 가운데 정렬} 하고 싶다면 어떻게 해야 할까?  */
+    /* id명이 wrap인 이름표를 가진 div */
+    div#wrap {
+      text-align: center;
+      border: 1px solid blue;
+    }
+
+    /* *(별표) : 모든태그를 가리킨다. */
+    /* id명이 wrap인 이름표를 가진 모든 태그 */
+    *#wrap {
+      text-align: center;
+      border: 1px solid blue;
+    }
+
+    /* *(별표)는 특별한 경우가 아니면 생략한다. */
+    /* id명이 wrap인 이름표를 가진 모든 태그 */
+    #wrap {
+      text-align: center;
+      border: 1px solid blue;
+    }
+
+    /* class는 .(마침표)로 표기한다. */
+    /* class명이 .dokdo인 이름표를 가진 img */
+    img.dokdo {
+      width: 80%;
+      border-radius: 50px;
+    }
+
+    /* 클래스명 dokdo인 이름표를 가진 모든 태그 */
+    .dokdo {
+      border: 5px solid pink;
+    }
+
+    /* 퀴즈) class명이 .container인 이름표를 가진 div의 직계자식 h2의 글자색을 purple로 설정하시오. */
+    div.container>h2 {
+      color: purple;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1>독도의 오늘</h1>
+    <p>독도는 화산활동으로 생겨난 두개의 큰 섬(동도, 서도)입니다.</p>
+
+    <div class="container">
+      <h2>1. 동도에서 바라본 서도</h2>
+      <p><img class="dokdo" src="./images/seodo.png" alt="서도"></p>
+
+      <h2>2. 서도에서 바라본 동도</h2>
+      <p><img class="dokdo" src="./images/dongdo.png" alt="동도"></p>
+    </div>
+
+    <p>맞은편에서 바라본 독도의 모습입니다.</p>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>450-배경이미지가 박스보다 작을때 크기조절</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <style>
+    p {
+      width: 800px;
+      height: 250px;
+      margin: 0 auto 80px;
+      line-height: 530px;
+      text-align: center;
+
+      /* 박스크기에 영향을 미치지 않음 */
+      outline: 1px solid red;
+
+      background-image: url(./images/독도수호신-480x200.jpg);
+      background-repeat: no-repeat;
+    }
+
+    p.s1 {
+      background-size: 550px 150px;
+    }
+
+    p.s2 {
+      /* 세로높이가 종횡비를 유지하며 자동으로 조절된다. (auto) */
+      background-size: 550px;
+    }
+
+    p.s3 {
+      background-size: cover;
+    }
+
+    p.s4 {
+      background-size: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <h1 class="text-center">독도수호신</h1>
+
+    <p class="s1">background-size : 550px 150px</p>
+    <p class="s2">background-size : 550px</p>
+    <p class="s3">background-size : cover (박스의 가로폭에 딱맞춤)</p>
+    <p class="s4">background-size : contain (박스의 세로높이에 딱맞춤)</p>
+  </div>
+</body>
+
+</html>

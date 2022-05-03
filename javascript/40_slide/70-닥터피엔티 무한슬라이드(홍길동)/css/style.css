@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+.slides {
+	position: relative;
+	height: 500px;
+}
+.slides > .slides-container {
+	display: flex;
+	flex-flow: row nowrap;
+	position: absolute;
+	left: -900%;
+	width: 2700%;
+}
+
+.slides > .slides-container > li {
+	width: calc(100% / 27);
+}
+
+.slides > .slides-container > li:nth-child(odd) {
+	background-color: pink;
+}
+
+.slides > .slides-container > li:nth-child(even) {
+	background-color: skyblue;
+}
+
+.slides > .slides-container > li.slide-1 {
+	background-image: url(./../images/pic1.png);
+}
+.slides > .slides-container > li.slide-2 {
+	background-image: url(./../images/pic2.png);
+}
+.slides > .slides-container > li.slide-3 {
+	background-image: url(./../images/pic3.png);
+}
+.slides > .slides-container > li.slide-4 {
+	background-image: url(./../images/pic4.png);
+}
+.slides > .slides-container > li.slide-5 {
+	background-image: url(./../images/pic5.png);
+}
+.slides > .slides-container > li.slide-6 {
+	background-image: url(./../images/pic6.jpg);
+}
+.slides > .slides-container > li.slide-7 {
+	background-image: url(./../images/pic7.png);
+}
+.slides > .slides-container > li.slide-8 {
+	background-image: url(./../images/pic8.png);
+}
+.slides > .slides-container > li.slide-9 {
+	background-image: url(./../images/pic9.jpg);
+}
+
+.slides > .slides-container > li > a {
+	display: block;
+	height: 500px;
+	text-indent: -99999px;
+	line-height: 500px;
+	text-align: center;
+	font-size: 50px;
+}
+
+/* 이전, 다음 */
+.slides > .slides-navigation {
+	display: block;
+	position: absolute;
+	top: 50%;
+	width: 38px;
+	height: 64px;
+	margin-top: -32px;
+	text-indent: -99999px;
+}
+.slides > .slides-navigation.slides-prev {
+	left: 10%;
+	background-image: url(./../images/prev.png);
+}
+
+.slides > .slides-navigation.slides-next {
+	right: 10%;
+	background-image: url(./../images/next.png);
+}
+
+/* 진행바 */
+.slides > .slides-progress {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	width: 150px;
+	margin-left: -75px;
+	font-size: 13px;
+}
+
+.slides > .slides-progress:after {
+	position: absolute;
+	left: 50%;
+	width: 100px;
+	height: 2px;
+	margin-left: -50px;
+	background-color: #dedede;
+	content: '';
+}
+
+.slides > .slides-progress > .slides-bar {
+	position: absolute;
+	left: 25px;
+	top: 7px;
+	z-index: 100;
+	width: 0;
+	height: 2px;
+	text-indent: -9999px;
+	background-color: #000;
+}
+
+/* 자동실행 원버튼 */
+.slides > .slides-auto {
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: 18px;
+	width: 20px;
+	height: 20px;
+	margin-left: 90px;
+	text-indent: -9999px;
+	background-image: url(./../images/icons.png);
+	background-position: -62px -24px;
+	cursor: pointer;
+}
+
+.slides > .slides-auto.pause {
+	background-position: 0 -57px;
+}
